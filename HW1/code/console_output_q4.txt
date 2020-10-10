@@ -1,0 +1,2137 @@
+Running LR and GNB for Boston50
+LR: Iteration  0
+LR: Training data  10 %
+LR: Error on training data =  10.0
+LR: Error on validation data =  23.52941176470588
+
+LR: Iteration  0
+LR: Training data  25 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  22.549019607843135
+
+LR: Iteration  0
+LR: Training data  50 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  17.64705882352941
+
+LR: Iteration  0
+LR: Training data  75 %
+LR: Error on training data =  12.541254125412541
+LR: Error on validation data =  17.64705882352941
+
+LR: Iteration  0
+LR: Training data  100 %
+LR: Error on training data =  11.633663366336634
+LR: Error on validation data =  17.64705882352941
+
+LR: Iteration  0
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  11.587458745874589
+LR: Std deviation of training error =  0.8490511942027972
+LR: Mean of validation error =  19.803921568627448
+LR: Std deviation of validation error =  2.659737248284419
+
+LR: Iteration  1
+LR: Training data  10 %
+LR: Error on training data =  12.5
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  1
+LR: Training data  25 %
+LR: Error on training data =  7.920792079207921
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  1
+LR: Training data  50 %
+LR: Error on training data =  10.89108910891089
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  1
+LR: Training data  75 %
+LR: Error on training data =  12.871287128712872
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  1
+LR: Training data  100 %
+LR: Error on training data =  11.386138613861386
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  1
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  11.113861386138613
+LR: Std deviation of training error =  1.750964275626475
+LR: Mean of validation error =  13.52941176470588
+LR: Std deviation of validation error =  0.7336583111321454
+
+LR: Iteration  2
+LR: Training data  10 %
+LR: Error on training data =  15.0
+LR: Error on validation data =  20.588235294117645
+
+LR: Iteration  2
+LR: Training data  25 %
+LR: Error on training data =  17.821782178217823
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  2
+LR: Training data  50 %
+LR: Error on training data =  13.366336633663366
+LR: Error on validation data =  11.76470588235294
+
+LR: Iteration  2
+LR: Training data  75 %
+LR: Error on training data =  12.871287128712872
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  2
+LR: Training data  100 %
+LR: Error on training data =  12.128712871287128
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  2
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  14.23762376237624
+LR: Std deviation of training error =  2.024891665311848
+LR: Mean of validation error =  14.901960784313726
+LR: Std deviation of validation error =  2.999423243289873
+
+LR: Iteration  3
+LR: Training data  10 %
+LR: Error on training data =  22.5
+LR: Error on validation data =  19.6078431372549
+
+LR: Iteration  3
+LR: Training data  25 %
+LR: Error on training data =  17.821782178217823
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  3
+LR: Training data  50 %
+LR: Error on training data =  11.386138613861386
+LR: Error on validation data =  15.686274509803921
+
+LR: Iteration  3
+LR: Training data  75 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  15.686274509803921
+
+LR: Iteration  3
+LR: Training data  100 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  3
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  15.094059405940593
+LR: Std deviation of training error =  4.3973216398344634
+LR: Mean of validation error =  15.686274509803923
+LR: Std deviation of validation error =  2.235638088429682
+
+LR: Iteration  4
+LR: Training data  10 %
+LR: Error on training data =  10.0
+LR: Error on validation data =  20.588235294117645
+
+LR: Iteration  4
+LR: Training data  25 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  17.64705882352941
+
+LR: Iteration  4
+LR: Training data  50 %
+LR: Error on training data =  10.89108910891089
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  4
+LR: Training data  75 %
+LR: Error on training data =  11.551155115511552
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  4
+LR: Training data  100 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  11.76470588235294
+
+LR: Iteration  4
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  10.844884488448844
+LR: Std deviation of training error =  0.797451527949252
+LR: Mean of validation error =  15.098039215686274
+LR: Std deviation of validation error =  3.429971702850176
+
+LR: Iteration  5
+LR: Training data  10 %
+LR: Error on training data =  10.0
+LR: Error on validation data =  11.76470588235294
+
+LR: Iteration  5
+LR: Training data  25 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  5
+LR: Training data  50 %
+LR: Error on training data =  14.356435643564357
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  5
+LR: Training data  75 %
+LR: Error on training data =  12.541254125412541
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  5
+LR: Training data  100 %
+LR: Error on training data =  11.386138613861386
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  5
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  12.033003300330034
+LR: Std deviation of training error =  1.4304713171452805
+LR: Mean of validation error =  12.352941176470587
+LR: Std deviation of validation error =  0.9998077477632912
+
+LR: Iteration  6
+LR: Training data  10 %
+LR: Error on training data =  2.5
+LR: Error on validation data =  18.627450980392155
+
+LR: Iteration  6
+LR: Training data  25 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  6
+LR: Training data  50 %
+LR: Error on training data =  12.376237623762377
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  6
+LR: Training data  75 %
+LR: Error on training data =  12.871287128712872
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  6
+LR: Training data  100 %
+LR: Error on training data =  13.118811881188119
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  6
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  10.153465346534654
+LR: Std deviation of training error =  3.993991173447816
+LR: Mean of validation error =  13.921568627450977
+LR: Std deviation of validation error =  2.586452148680964
+
+LR: Iteration  7
+LR: Training data  10 %
+LR: Error on training data =  5.0
+LR: Error on validation data =  22.549019607843135
+
+LR: Iteration  7
+LR: Training data  25 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  15.686274509803921
+
+LR: Iteration  7
+LR: Training data  50 %
+LR: Error on training data =  10.89108910891089
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  7
+LR: Training data  75 %
+LR: Error on training data =  10.231023102310232
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  7
+LR: Training data  100 %
+LR: Error on training data =  11.633663366336634
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  7
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  9.531353135313532
+LR: Std deviation of training error =  2.342132404879057
+LR: Mean of validation error =  16.274509803921568
+LR: Std deviation of validation error =  3.1979424373137433
+
+LR: Iteration  8
+LR: Training data  10 %
+LR: Error on training data =  7.5
+LR: Error on validation data =  17.64705882352941
+
+LR: Iteration  8
+LR: Training data  25 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  16.666666666666664
+
+LR: Iteration  8
+LR: Training data  50 %
+LR: Error on training data =  12.871287128712872
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  8
+LR: Training data  75 %
+LR: Error on training data =  12.21122112211221
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  8
+LR: Training data  100 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  8
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  10.872937293729374
+LR: Std deviation of training error =  1.955625870728992
+LR: Mean of validation error =  14.901960784313724
+LR: Std deviation of validation error =  1.9996154955265815
+
+LR: Iteration  9
+LR: Training data  10 %
+LR: Error on training data =  10.0
+LR: Error on validation data =  19.6078431372549
+
+LR: Iteration  9
+LR: Training data  25 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  18.627450980392155
+
+LR: Iteration  9
+LR: Training data  50 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  15.686274509803921
+
+LR: Iteration  9
+LR: Training data  75 %
+LR: Error on training data =  10.89108910891089
+LR: Error on validation data =  15.686274509803921
+
+LR: Iteration  9
+LR: Training data  100 %
+LR: Error on training data =  10.396039603960396
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  9
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  11.009900990099009
+LR: Std deviation of training error =  0.7653920035678291
+LR: Mean of validation error =  16.666666666666664
+LR: Std deviation of validation error =  2.147931598059474
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  10 %
+LR: Mean of training error =  10.5
+LR: Std deviation of training error =  5.220153254455275
+LR: Mean of validation error =  18.921568627450977
+LR: Std deviation of validation error =  3.340534321058984
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  25 %
+LR: Mean of training error =  11.881188118811881
+LR: Std deviation of training error =  3.1929733656627928
+LR: Mean of validation error =  15.980392156862743
+LR: Std deviation of validation error =  2.84313725490196
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  50 %
+LR: Mean of training error =  12.079207920792078
+LR: Std deviation of training error =  1.111383382210082
+LR: Mean of validation error =  14.215686274509801
+LR: Std deviation of validation error =  1.7121812937816645
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  75 %
+LR: Mean of training error =  12.046204620462046
+LR: Std deviation of training error =  0.8637790315711156
+LR: Mean of validation error =  13.92156862745098
+LR: Std deviation of validation error =  1.9010509244769915
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  100 %
+LR: Mean of training error =  11.732673267326732
+LR: Std deviation of training error =  0.6473612292387139
+LR: Mean of validation error =  13.52941176470588
+LR: Std deviation of validation error =  1.7427832190814876
+
+GNB: Iteration  0
+GNB: Training data  10 %
+GNB: Error on training data =  20.0
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  0
+GNB: Training data  25 %
+GNB: Error on training data =  21.78217821782178
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  0
+GNB: Training data  50 %
+GNB: Error on training data =  17.326732673267326
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  0
+GNB: Training data  75 %
+GNB: Error on training data =  21.45214521452145
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  0
+GNB: Training data  100 %
+GNB: Error on training data =  21.03960396039604
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  0
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  20.32013201320132
+GNB: Std deviation of training error =  1.6124265558097155
+GNB: Mean of validation error =  21.176470588235293
+GNB: Std deviation of validation error =  1.1764705882352942
+
+GNB: Iteration  1
+GNB: Training data  10 %
+GNB: Error on training data =  20.0
+GNB: Error on validation data =  15.686274509803921
+
+GNB: Iteration  1
+GNB: Training data  25 %
+GNB: Error on training data =  22.77227722772277
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  1
+GNB: Training data  50 %
+GNB: Error on training data =  24.752475247524753
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  1
+GNB: Training data  75 %
+GNB: Error on training data =  23.762376237623762
+GNB: Error on validation data =  15.686274509803921
+
+GNB: Iteration  1
+GNB: Training data  100 %
+GNB: Error on training data =  22.524752475247524
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  1
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  22.762376237623762
+GNB: Std deviation of training error =  1.5904577724320816
+GNB: Mean of validation error =  16.274509803921568
+GNB: Std deviation of validation error =  0.48029210642807335
+
+GNB: Iteration  2
+GNB: Training data  10 %
+GNB: Error on training data =  22.5
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  2
+GNB: Training data  25 %
+GNB: Error on training data =  18.81188118811881
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  2
+GNB: Training data  50 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  2
+GNB: Training data  75 %
+GNB: Error on training data =  21.122112211221122
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  2
+GNB: Training data  100 %
+GNB: Error on training data =  21.03960396039604
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  2
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  20.853135313531354
+GNB: Std deviation of training error =  1.1823475526119962
+GNB: Mean of validation error =  19.803921568627448
+GNB: Std deviation of validation error =  0.7336583111321453
+
+GNB: Iteration  3
+GNB: Training data  10 %
+GNB: Error on training data =  15.0
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  3
+GNB: Training data  25 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  3
+GNB: Training data  50 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  3
+GNB: Training data  75 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  3
+GNB: Training data  100 %
+GNB: Error on training data =  20.544554455445546
+GNB: Error on validation data =  24.509803921568626
+
+GNB: Iteration  3
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  19.584158415841586
+GNB: Std deviation of training error =  2.2940831220437494
+GNB: Mean of validation error =  23.529411764705877
+GNB: Std deviation of validation error =  0.6200544431702705
+
+GNB: Iteration  4
+GNB: Training data  10 %
+GNB: Error on training data =  7.5
+GNB: Error on validation data =  29.41176470588235
+
+GNB: Iteration  4
+GNB: Training data  25 %
+GNB: Error on training data =  13.861386138613861
+GNB: Error on validation data =  30.392156862745097
+
+GNB: Iteration  4
+GNB: Training data  50 %
+GNB: Error on training data =  16.336633663366335
+GNB: Error on validation data =  30.392156862745097
+
+GNB: Iteration  4
+GNB: Training data  75 %
+GNB: Error on training data =  17.821782178217823
+GNB: Error on validation data =  33.33333333333333
+
+GNB: Iteration  4
+GNB: Training data  100 %
+GNB: Error on training data =  19.059405940594058
+GNB: Error on validation data =  33.33333333333333
+
+GNB: Iteration  4
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  14.915841584158414
+GNB: Std deviation of training error =  4.092403917807673
+GNB: Mean of validation error =  31.37254901960784
+GNB: Std deviation of validation error =  1.6405098559491662
+
+GNB: Iteration  5
+GNB: Training data  10 %
+GNB: Error on training data =  25.0
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  5
+GNB: Training data  25 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  5
+GNB: Training data  50 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  21.56862745098039
+
+GNB: Iteration  5
+GNB: Training data  75 %
+GNB: Error on training data =  22.442244224422442
+GNB: Error on validation data =  21.56862745098039
+
+GNB: Iteration  5
+GNB: Training data  100 %
+GNB: Error on training data =  21.534653465346533
+GNB: Error on validation data =  21.56862745098039
+
+GNB: Iteration  5
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  22.112211221122113
+GNB: Std deviation of training error =  1.5663534620573312
+GNB: Mean of validation error =  20.784313725490193
+GNB: Std deviation of validation error =  0.9605842128561483
+
+GNB: Iteration  6
+GNB: Training data  10 %
+GNB: Error on training data =  22.5
+GNB: Error on validation data =  13.72549019607843
+
+GNB: Iteration  6
+GNB: Training data  25 %
+GNB: Error on training data =  24.752475247524753
+GNB: Error on validation data =  13.72549019607843
+
+GNB: Iteration  6
+GNB: Training data  50 %
+GNB: Error on training data =  23.26732673267327
+GNB: Error on validation data =  15.686274509803921
+
+GNB: Iteration  6
+GNB: Training data  75 %
+GNB: Error on training data =  23.762376237623762
+GNB: Error on validation data =  15.686274509803921
+
+GNB: Iteration  6
+GNB: Training data  100 %
+GNB: Error on training data =  22.02970297029703
+GNB: Error on validation data =  15.686274509803921
+
+GNB: Iteration  6
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  23.262376237623762
+GNB: Std deviation of training error =  0.9561506657828013
+GNB: Mean of validation error =  14.901960784313724
+GNB: Std deviation of validation error =  0.9605842128561483
+
+GNB: Iteration  7
+GNB: Training data  10 %
+GNB: Error on training data =  20.0
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  7
+GNB: Training data  25 %
+GNB: Error on training data =  17.821782178217823
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  7
+GNB: Training data  50 %
+GNB: Error on training data =  21.78217821782178
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  7
+GNB: Training data  75 %
+GNB: Error on training data =  21.78217821782178
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  7
+GNB: Training data  100 %
+GNB: Error on training data =  21.78217821782178
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  7
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  20.633663366336634
+GNB: Std deviation of training error =  1.5662352422404096
+GNB: Mean of validation error =  20.19607843137255
+GNB: Std deviation of validation error =  1.8183565677442557
+
+GNB: Iteration  8
+GNB: Training data  10 %
+GNB: Error on training data =  20.0
+GNB: Error on validation data =  12.745098039215685
+
+GNB: Iteration  8
+GNB: Training data  25 %
+GNB: Error on training data =  23.762376237623762
+GNB: Error on validation data =  11.76470588235294
+
+GNB: Iteration  8
+GNB: Training data  50 %
+GNB: Error on training data =  23.26732673267327
+GNB: Error on validation data =  11.76470588235294
+
+GNB: Iteration  8
+GNB: Training data  75 %
+GNB: Error on training data =  22.77227722772277
+GNB: Error on validation data =  12.745098039215685
+
+GNB: Iteration  8
+GNB: Training data  100 %
+GNB: Error on training data =  23.26732673267327
+GNB: Error on validation data =  12.745098039215685
+
+GNB: Iteration  8
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  22.613861386138613
+GNB: Std deviation of training error =  1.3439112476005668
+GNB: Mean of validation error =  12.352941176470587
+GNB: Std deviation of validation error =  0.48029210642807413
+
+GNB: Iteration  9
+GNB: Training data  10 %
+GNB: Error on training data =  25.0
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  9
+GNB: Training data  25 %
+GNB: Error on training data =  21.78217821782178
+GNB: Error on validation data =  19.6078431372549
+
+GNB: Iteration  9
+GNB: Training data  50 %
+GNB: Error on training data =  21.78217821782178
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  9
+GNB: Training data  75 %
+GNB: Error on training data =  20.13201320132013
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  9
+GNB: Training data  100 %
+GNB: Error on training data =  21.03960396039604
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  9
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  21.947194719471945
+GNB: Std deviation of training error =  1.6427224903953557
+GNB: Mean of validation error =  20.784313725490197
+GNB: Std deviation of validation error =  1.5686274509803924
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  10 %
+GNB: Mean of training error =  19.75
+GNB: Std deviation of training error =  4.930770730829005
+GNB: Mean of validation error =  19.11764705882353
+GNB: Std deviation of validation error =  4.561721617306604
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  25 %
+GNB: Mean of training error =  20.69306930693069
+GNB: Std deviation of training error =  3.0177724067580534
+GNB: Mean of validation error =  20.09803921568627
+GNB: Std deviation of validation error =  5.080096630600633
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  50 %
+GNB: Mean of training error =  21.08910891089109
+GNB: Std deviation of training error =  2.467314018688538
+GNB: Mean of validation error =  20.098039215686274
+GNB: Std deviation of validation error =  4.7272797848004675
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  75 %
+GNB: Mean of training error =  21.584158415841582
+GNB: Std deviation of training error =  1.6970244398920709
+GNB: Mean of validation error =  20.588235294117645
+GNB: Std deviation of validation error =  5.351899632923991
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  100 %
+GNB: Mean of training error =  21.386138613861384
+GNB: Std deviation of training error =  1.0913568160915155
+GNB: Mean of validation error =  20.686274509803923
+GNB: Std deviation of validation error =  5.359975267779076
+
+Running LR and GNB for Boston75
+LR: Iteration  0
+LR: Training data  10 %
+LR: Error on training data =  7.5
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  0
+LR: Training data  25 %
+LR: Error on training data =  7.920792079207921
+LR: Error on validation data =  7.8431372549019605
+
+LR: Iteration  0
+LR: Training data  50 %
+LR: Error on training data =  8.415841584158416
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  0
+LR: Training data  75 %
+LR: Error on training data =  10.561056105610561
+LR: Error on validation data =  6.862745098039215
+
+LR: Iteration  0
+LR: Training data  100 %
+LR: Error on training data =  9.405940594059405
+LR: Error on validation data =  7.8431372549019605
+
+LR: Iteration  0
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  8.76072607260726
+LR: Std deviation of training error =  1.1019396226852447
+LR: Mean of validation error =  9.019607843137255
+LR: Std deviation of validation error =  2.433269342351148
+
+LR: Iteration  1
+LR: Training data  10 %
+LR: Error on training data =  5.0
+LR: Error on validation data =  9.80392156862745
+
+LR: Iteration  1
+LR: Training data  25 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  1
+LR: Training data  50 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  1
+LR: Training data  75 %
+LR: Error on training data =  9.57095709570957
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  1
+LR: Training data  100 %
+LR: Error on training data =  7.920792079207921
+LR: Error on validation data =  6.862745098039215
+
+LR: Iteration  1
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  8.458745874587459
+LR: Std deviation of training error =  1.8788011026763178
+LR: Mean of validation error =  9.019607843137253
+LR: Std deviation of validation error =  1.3006371726883919
+
+LR: Iteration  2
+LR: Training data  10 %
+LR: Error on training data =  12.5
+LR: Error on validation data =  9.80392156862745
+
+LR: Iteration  2
+LR: Training data  25 %
+LR: Error on training data =  13.861386138613861
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  2
+LR: Training data  50 %
+LR: Error on training data =  10.89108910891089
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  2
+LR: Training data  75 %
+LR: Error on training data =  8.58085808580858
+LR: Error on validation data =  9.80392156862745
+
+LR: Iteration  2
+LR: Training data  100 %
+LR: Error on training data =  9.158415841584159
+LR: Error on validation data =  9.80392156862745
+
+LR: Iteration  2
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  10.998349834983497
+LR: Std deviation of training error =  1.9845935813033542
+LR: Mean of validation error =  9.80392156862745
+LR: Std deviation of validation error =  0.6200544431702705
+
+LR: Iteration  3
+LR: Training data  10 %
+LR: Error on training data =  2.5
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  3
+LR: Training data  25 %
+LR: Error on training data =  5.9405940594059405
+LR: Error on validation data =  11.76470588235294
+
+LR: Iteration  3
+LR: Training data  50 %
+LR: Error on training data =  5.9405940594059405
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  3
+LR: Training data  75 %
+LR: Error on training data =  6.930693069306931
+LR: Error on validation data =  7.8431372549019605
+
+LR: Iteration  3
+LR: Training data  100 %
+LR: Error on training data =  8.663366336633663
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  3
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  5.9950495049504955
+LR: Std deviation of training error =  2.0108030946325366
+LR: Mean of validation error =  10.784313725490195
+LR: Std deviation of validation error =  2.4014605321403706
+
+LR: Iteration  4
+LR: Training data  10 %
+LR: Error on training data =  5.0
+LR: Error on validation data =  21.56862745098039
+
+LR: Iteration  4
+LR: Training data  25 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  16.666666666666664
+
+LR: Iteration  4
+LR: Training data  50 %
+LR: Error on training data =  7.425742574257425
+LR: Error on validation data =  16.666666666666664
+
+LR: Iteration  4
+LR: Training data  75 %
+LR: Error on training data =  6.600660066006601
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  4
+LR: Training data  100 %
+LR: Error on training data =  7.673267326732673
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  4
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  7.320132013201319
+LR: Std deviation of training error =  1.5935707728767352
+LR: Mean of validation error =  16.862745098039216
+LR: Std deviation of validation error =  2.511029112718764
+
+LR: Iteration  5
+LR: Training data  10 %
+LR: Error on training data =  10.0
+LR: Error on validation data =  14.705882352941176
+
+LR: Iteration  5
+LR: Training data  25 %
+LR: Error on training data =  10.89108910891089
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  5
+LR: Training data  50 %
+LR: Error on training data =  7.920792079207921
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  5
+LR: Training data  75 %
+LR: Error on training data =  6.600660066006601
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  5
+LR: Training data  100 %
+LR: Error on training data =  8.168316831683168
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  5
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  8.716171617161717
+LR: Std deviation of training error =  1.5353595025879603
+LR: Mean of validation error =  13.52941176470588
+LR: Std deviation of validation error =  0.7336583111321454
+
+LR: Iteration  6
+LR: Training data  10 %
+LR: Error on training data =  5.0
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  6
+LR: Training data  25 %
+LR: Error on training data =  7.920792079207921
+LR: Error on validation data =  7.8431372549019605
+
+LR: Iteration  6
+LR: Training data  50 %
+LR: Error on training data =  5.9405940594059405
+LR: Error on validation data =  7.8431372549019605
+
+LR: Iteration  6
+LR: Training data  75 %
+LR: Error on training data =  7.260726072607261
+LR: Error on validation data =  6.862745098039215
+
+LR: Iteration  6
+LR: Training data  100 %
+LR: Error on training data =  9.900990099009901
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  6
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  7.204620462046205
+LR: Std deviation of training error =  1.6878728016144284
+LR: Mean of validation error =  8.431372549019606
+LR: Std deviation of validation error =  1.329868624142209
+
+LR: Iteration  7
+LR: Training data  10 %
+LR: Error on training data =  7.5
+LR: Error on validation data =  7.8431372549019605
+
+LR: Iteration  7
+LR: Training data  25 %
+LR: Error on training data =  6.930693069306931
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  7
+LR: Training data  50 %
+LR: Error on training data =  7.425742574257425
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  7
+LR: Training data  75 %
+LR: Error on training data =  9.24092409240924
+LR: Error on validation data =  5.88235294117647
+
+LR: Iteration  7
+LR: Training data  100 %
+LR: Error on training data =  9.405940594059405
+LR: Error on validation data =  4.901960784313725
+
+LR: Iteration  7
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  8.1006600660066
+LR: Std deviation of training error =  1.0187333523304583
+LR: Mean of validation error =  7.254901960784312
+LR: Std deviation of validation error =  1.5929487067913646
+
+LR: Iteration  8
+LR: Training data  10 %
+LR: Error on training data =  10.0
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  8
+LR: Training data  25 %
+LR: Error on training data =  11.881188118811881
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  8
+LR: Training data  50 %
+LR: Error on training data =  8.910891089108912
+LR: Error on validation data =  8.823529411764705
+
+LR: Iteration  8
+LR: Training data  75 %
+LR: Error on training data =  10.231023102310232
+LR: Error on validation data =  9.80392156862745
+
+LR: Iteration  8
+LR: Training data  100 %
+LR: Error on training data =  9.653465346534654
+LR: Error on validation data =  9.80392156862745
+
+LR: Iteration  8
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  10.135313531353136
+LR: Std deviation of training error =  0.9805035582962938
+LR: Mean of validation error =  11.176470588235293
+LR: Std deviation of validation error =  2.1118293361311786
+
+LR: Iteration  9
+LR: Training data  10 %
+LR: Error on training data =  2.5
+LR: Error on validation data =  15.686274509803921
+
+LR: Iteration  9
+LR: Training data  25 %
+LR: Error on training data =  4.9504950495049505
+LR: Error on validation data =  12.745098039215685
+
+LR: Iteration  9
+LR: Training data  50 %
+LR: Error on training data =  5.9405940594059405
+LR: Error on validation data =  13.72549019607843
+
+LR: Iteration  9
+LR: Training data  75 %
+LR: Error on training data =  6.930693069306931
+LR: Error on validation data =  11.76470588235294
+
+LR: Iteration  9
+LR: Training data  100 %
+LR: Error on training data =  8.910891089108912
+LR: Error on validation data =  10.784313725490195
+
+LR: Iteration  9
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  5.846534653465346
+LR: Std deviation of training error =  2.1249333244064905
+LR: Mean of validation error =  12.941176470588236
+LR: Std deviation of validation error =  1.6867304445181623
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  10 %
+LR: Mean of training error =  6.75
+LR: Std deviation of training error =  3.17214438511238
+LR: Mean of validation error =  13.235294117647058
+LR: Std deviation of validation error =  3.7267799624996494
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  25 %
+LR: Mean of training error =  9.009900990099009
+LR: Std deviation of training error =  2.6363419714246232
+LR: Mean of validation error =  11.274509803921568
+LR: Std deviation of validation error =  2.8159620816362883
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  50 %
+LR: Mean of training error =  7.87128712871287
+LR: Std deviation of training error =  1.6185923489378033
+LR: Mean of validation error =  10.88235294117647
+LR: Std deviation of validation error =  2.7538376284682626
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  75 %
+LR: Mean of training error =  8.25082508250825
+LR: Std deviation of training error =  1.4833138649666158
+LR: Mean of validation error =  9.509803921568627
+LR: Std deviation of validation error =  2.7045322008105335
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  100 %
+LR: Mean of training error =  8.886138613861387
+LR: Std deviation of training error =  0.7212278358580925
+LR: Mean of validation error =  9.509803921568626
+LR: Std deviation of validation error =  2.6687563899639604
+
+GNB: Iteration  0
+GNB: Training data  10 %
+GNB: Error on training data =  15.0
+GNB: Error on validation data =  20.588235294117645
+
+GNB: Iteration  0
+GNB: Training data  25 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  0
+GNB: Training data  50 %
+GNB: Error on training data =  19.801980198019802
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  0
+GNB: Training data  75 %
+GNB: Error on training data =  20.13201320132013
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  0
+GNB: Training data  100 %
+GNB: Error on training data =  17.574257425742573
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  0
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  18.660066006600662
+GNB: Std deviation of training error =  2.1256123965647653
+GNB: Mean of validation error =  19.803921568627448
+GNB: Std deviation of validation error =  1.5686274509803924
+
+GNB: Iteration  1
+GNB: Training data  10 %
+GNB: Error on training data =  7.5
+GNB: Error on validation data =  13.72549019607843
+
+GNB: Iteration  1
+GNB: Training data  25 %
+GNB: Error on training data =  13.861386138613861
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  1
+GNB: Training data  50 %
+GNB: Error on training data =  20.297029702970296
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  1
+GNB: Training data  75 %
+GNB: Error on training data =  18.81188118811881
+GNB: Error on validation data =  21.56862745098039
+
+GNB: Iteration  1
+GNB: Training data  100 %
+GNB: Error on training data =  18.316831683168317
+GNB: Error on validation data =  21.56862745098039
+
+GNB: Iteration  1
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  15.75742574257426
+GNB: Std deviation of training error =  4.65334948244214
+GNB: Mean of validation error =  19.41176470588235
+GNB: Std deviation of validation error =  3.30437246006916
+
+GNB: Iteration  2
+GNB: Training data  10 %
+GNB: Error on training data =  20.0
+GNB: Error on validation data =  11.76470588235294
+
+GNB: Iteration  2
+GNB: Training data  25 %
+GNB: Error on training data =  17.821782178217823
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  2
+GNB: Training data  50 %
+GNB: Error on training data =  19.801980198019802
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  2
+GNB: Training data  75 %
+GNB: Error on training data =  17.821782178217823
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  2
+GNB: Training data  100 %
+GNB: Error on training data =  18.564356435643564
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  2
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  18.8019801980198
+GNB: Std deviation of training error =  0.9394991021209069
+GNB: Mean of validation error =  15.88235294117647
+GNB: Std deviation of validation error =  2.0935447553002566
+
+GNB: Iteration  3
+GNB: Training data  10 %
+GNB: Error on training data =  25.0
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  3
+GNB: Training data  25 %
+GNB: Error on training data =  23.762376237623762
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  3
+GNB: Training data  50 %
+GNB: Error on training data =  20.792079207920793
+GNB: Error on validation data =  15.686274509803921
+
+GNB: Iteration  3
+GNB: Training data  75 %
+GNB: Error on training data =  18.48184818481848
+GNB: Error on validation data =  13.72549019607843
+
+GNB: Iteration  3
+GNB: Training data  100 %
+GNB: Error on training data =  18.81188118811881
+GNB: Error on validation data =  12.745098039215685
+
+GNB: Iteration  3
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  21.369636963696372
+GNB: Std deviation of training error =  2.6122690752877746
+GNB: Mean of validation error =  15.490196078431373
+GNB: Std deviation of validation error =  1.9996154955265817
+
+GNB: Iteration  4
+GNB: Training data  10 %
+GNB: Error on training data =  12.5
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  4
+GNB: Training data  25 %
+GNB: Error on training data =  10.89108910891089
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  4
+GNB: Training data  50 %
+GNB: Error on training data =  11.881188118811881
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  4
+GNB: Training data  75 %
+GNB: Error on training data =  14.191419141914192
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  4
+GNB: Training data  100 %
+GNB: Error on training data =  17.07920792079208
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  4
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  13.30858085808581
+GNB: Std deviation of training error =  2.169449297629676
+GNB: Mean of validation error =  19.2156862745098
+GNB: Std deviation of validation error =  2.200974933396436
+
+GNB: Iteration  5
+GNB: Training data  10 %
+GNB: Error on training data =  15.0
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  5
+GNB: Training data  25 %
+GNB: Error on training data =  19.801980198019802
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  5
+GNB: Training data  50 %
+GNB: Error on training data =  22.277227722772277
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  5
+GNB: Training data  75 %
+GNB: Error on training data =  18.48184818481848
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  5
+GNB: Training data  100 %
+GNB: Error on training data =  18.06930693069307
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  5
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  18.726072607260726
+GNB: Std deviation of training error =  2.372462163883345
+GNB: Mean of validation error =  17.25490196078431
+GNB: Std deviation of validation error =  0.4802921064280742
+
+GNB: Iteration  6
+GNB: Training data  10 %
+GNB: Error on training data =  15.0
+GNB: Error on validation data =  31.372549019607842
+
+GNB: Iteration  6
+GNB: Training data  25 %
+GNB: Error on training data =  15.841584158415841
+GNB: Error on validation data =  30.392156862745097
+
+GNB: Iteration  6
+GNB: Training data  50 %
+GNB: Error on training data =  19.306930693069308
+GNB: Error on validation data =  25.49019607843137
+
+GNB: Iteration  6
+GNB: Training data  75 %
+GNB: Error on training data =  16.831683168316832
+GNB: Error on validation data =  25.49019607843137
+
+GNB: Iteration  6
+GNB: Training data  100 %
+GNB: Error on training data =  17.574257425742573
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  6
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  16.910891089108908
+GNB: Std deviation of training error =  1.4820429576436533
+GNB: Mean of validation error =  27.25490196078431
+GNB: Std deviation of validation error =  3.062843010159473
+
+GNB: Iteration  7
+GNB: Training data  10 %
+GNB: Error on training data =  15.0
+GNB: Error on validation data =  11.76470588235294
+
+GNB: Iteration  7
+GNB: Training data  25 %
+GNB: Error on training data =  12.871287128712872
+GNB: Error on validation data =  13.72549019607843
+
+GNB: Iteration  7
+GNB: Training data  50 %
+GNB: Error on training data =  16.831683168316832
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  7
+GNB: Training data  75 %
+GNB: Error on training data =  19.471947194719473
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  7
+GNB: Training data  100 %
+GNB: Error on training data =  18.316831683168317
+GNB: Error on validation data =  16.666666666666664
+
+GNB: Iteration  7
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  16.4983498349835
+GNB: Std deviation of training error =  2.3520588727466762
+GNB: Mean of validation error =  15.294117647058822
+GNB: Std deviation of validation error =  2.2009749333964352
+
+GNB: Iteration  8
+GNB: Training data  10 %
+GNB: Error on training data =  10.0
+GNB: Error on validation data =  22.549019607843135
+
+GNB: Iteration  8
+GNB: Training data  25 %
+GNB: Error on training data =  11.881188118811881
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  8
+GNB: Training data  50 %
+GNB: Error on training data =  14.85148514851485
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  8
+GNB: Training data  75 %
+GNB: Error on training data =  16.17161716171617
+GNB: Error on validation data =  17.64705882352941
+
+GNB: Iteration  8
+GNB: Training data  100 %
+GNB: Error on training data =  17.07920792079208
+GNB: Error on validation data =  21.56862745098039
+
+GNB: Iteration  8
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  13.996699669966995
+GNB: Std deviation of training error =  2.661269576786333
+GNB: Mean of validation error =  19.803921568627448
+GNB: Std deviation of validation error =  1.901050924476992
+
+GNB: Iteration  9
+GNB: Training data  10 %
+GNB: Error on training data =  17.5
+GNB: Error on validation data =  23.52941176470588
+
+GNB: Iteration  9
+GNB: Training data  25 %
+GNB: Error on training data =  13.861386138613861
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  9
+GNB: Training data  50 %
+GNB: Error on training data =  17.821782178217823
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  9
+GNB: Training data  75 %
+GNB: Error on training data =  17.49174917491749
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  9
+GNB: Training data  100 %
+GNB: Error on training data =  17.326732673267326
+GNB: Error on validation data =  18.627450980392155
+
+GNB: Iteration  9
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  16.8003300330033
+GNB: Std deviation of training error =  1.4782052585166765
+GNB: Mean of validation error =  19.6078431372549
+GNB: Std deviation of validation error =  1.9607843137254906
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  10 %
+GNB: Mean of training error =  15.25
+GNB: Std deviation of training error =  4.670385423067351
+GNB: Mean of validation error =  19.313725490196074
+GNB: Std deviation of validation error =  5.899484856207994
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  25 %
+GNB: Mean of training error =  16.13861386138614
+GNB: Std deviation of training error =  4.035184925210857
+GNB: Mean of validation error =  19.11764705882353
+GNB: Std deviation of validation error =  4.30145313107457
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  50 %
+GNB: Mean of training error =  18.366336633663366
+GNB: Std deviation of training error =  2.9491823779418778
+GNB: Mean of validation error =  18.921568627450977
+GNB: Std deviation of validation error =  2.7747003329578246
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  75 %
+GNB: Mean of training error =  17.788778877887786
+GNB: Std deviation of training error =  1.6399020790501442
+GNB: Mean of validation error =  18.52941176470588
+GNB: Std deviation of validation error =  2.9558457709179087
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  100 %
+GNB: Mean of training error =  17.871287128712872
+GNB: Std deviation of training error =  0.594059405940594
+GNB: Mean of validation error =  18.627450980392155
+GNB: Std deviation of validation error =  2.9083131321943774
+
+G:\My Drive\UMN\Semesters\Fall_20\CSCI_5525_ML\HW\HW1\code\ReadNormalizedDataset.py:20: RuntimeWarning: invalid value encountered in true_divide
+  X_trn_norm = (X_trn - np.tile(mu, (np.shape(X_trn)[0], 1))) / np.tile(s, (np.shape(X_trn)[0], 1))
+Running LR and GNB for digits
+LR: Iteration  0
+LR: Training data  10 %
+LR: Error on training data =  0.6993006993006993
+LR: Error on validation data =  11.263736263736265
+
+LR: Iteration  0
+LR: Training data  25 %
+LR: Error on training data =  0.8379888268156424
+LR: Error on validation data =  6.318681318681319
+
+LR: Iteration  0
+LR: Training data  50 %
+LR: Error on training data =  1.1173184357541899
+LR: Error on validation data =  4.120879120879121
+
+LR: Iteration  0
+LR: Training data  75 %
+LR: Error on training data =  1.2104283054003724
+LR: Error on validation data =  4.120879120879121
+
+LR: Iteration  0
+LR: Training data  100 %
+LR: Error on training data =  1.3258897418004187
+LR: Error on validation data =  3.5714285714285716
+
+LR: Iteration  0
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  1.0381852018142645
+LR: Std deviation of training error =  0.2339337309503979
+LR: Mean of validation error =  5.8791208791208796
+LR: Std deviation of validation error =  2.852913183680697
+
+LR: Iteration  1
+LR: Training data  10 %
+LR: Error on training data =  1.3986013986013985
+LR: Error on validation data =  7.967032967032968
+
+LR: Iteration  1
+LR: Training data  25 %
+LR: Error on training data =  1.6759776536312847
+LR: Error on validation data =  3.8461538461538467
+
+LR: Iteration  1
+LR: Training data  50 %
+LR: Error on training data =  1.6759776536312847
+LR: Error on validation data =  2.197802197802198
+
+LR: Iteration  1
+LR: Training data  75 %
+LR: Error on training data =  1.3966480446927374
+LR: Error on validation data =  2.197802197802198
+
+LR: Iteration  1
+LR: Training data  100 %
+LR: Error on training data =  1.1863224005582693
+LR: Error on validation data =  1.9230769230769234
+
+LR: Iteration  1
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  1.466705430222995
+LR: Std deviation of training error =  0.18748363485644245
+LR: Mean of validation error =  3.6263736263736264
+LR: Std deviation of validation error =  2.2747518180752144
+
+LR: Iteration  2
+LR: Training data  10 %
+LR: Error on training data =  0.0
+LR: Error on validation data =  12.08791208791209
+
+LR: Iteration  2
+LR: Training data  25 %
+LR: Error on training data =  1.1173184357541899
+LR: Error on validation data =  7.417582417582418
+
+LR: Iteration  2
+LR: Training data  50 %
+LR: Error on training data =  0.6983240223463687
+LR: Error on validation data =  6.318681318681319
+
+LR: Iteration  2
+LR: Training data  75 %
+LR: Error on training data =  1.2104283054003724
+LR: Error on validation data =  5.76923076923077
+
+LR: Iteration  2
+LR: Training data  100 %
+LR: Error on training data =  1.2561060711793441
+LR: Error on validation data =  5.21978021978022
+
+LR: Iteration  2
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  0.8564353669360549
+LR: Std deviation of training error =  0.4715057545641941
+LR: Mean of validation error =  7.362637362637363
+LR: Std deviation of validation error =  2.471916896527911
+
+LR: Iteration  3
+LR: Training data  10 %
+LR: Error on training data =  0.0
+LR: Error on validation data =  12.637362637362639
+
+LR: Iteration  3
+LR: Training data  25 %
+LR: Error on training data =  0.5586592178770949
+LR: Error on validation data =  7.692307692307693
+
+LR: Iteration  3
+LR: Training data  50 %
+LR: Error on training data =  1.2569832402234635
+LR: Error on validation data =  4.670329670329671
+
+LR: Iteration  3
+LR: Training data  75 %
+LR: Error on training data =  1.5828677839851024
+LR: Error on validation data =  3.0219780219780223
+
+LR: Iteration  3
+LR: Training data  100 %
+LR: Error on training data =  1.3258897418004187
+LR: Error on validation data =  3.0219780219780223
+
+LR: Iteration  3
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  0.9448799967772159
+LR: Std deviation of training error =  0.5816476554345693
+LR: Mean of validation error =  6.20879120879121
+LR: Std deviation of validation error =  3.6388397120436156
+
+LR: Iteration  4
+LR: Training data  10 %
+LR: Error on training data =  0.6993006993006993
+LR: Error on validation data =  8.791208791208792
+
+LR: Iteration  4
+LR: Training data  25 %
+LR: Error on training data =  0.5586592178770949
+LR: Error on validation data =  7.417582417582418
+
+LR: Iteration  4
+LR: Training data  50 %
+LR: Error on training data =  0.6983240223463687
+LR: Error on validation data =  6.318681318681319
+
+LR: Iteration  4
+LR: Training data  75 %
+LR: Error on training data =  1.48975791433892
+LR: Error on validation data =  5.4945054945054945
+
+LR: Iteration  4
+LR: Training data  100 %
+LR: Error on training data =  1.2561060711793441
+LR: Error on validation data =  4.670329670329671
+
+LR: Iteration  4
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  0.9404295850084854
+LR: Std deviation of training error =  0.364395420811075
+LR: Mean of validation error =  6.53846153846154
+LR: Std deviation of validation error =  1.4474659200351092
+
+LR: Iteration  5
+LR: Training data  10 %
+LR: Error on training data =  0.0
+LR: Error on validation data =  10.164835164835166
+
+LR: Iteration  5
+LR: Training data  25 %
+LR: Error on training data =  0.8379888268156424
+LR: Error on validation data =  4.945054945054945
+
+LR: Iteration  5
+LR: Training data  50 %
+LR: Error on training data =  1.1173184357541899
+LR: Error on validation data =  4.395604395604396
+
+LR: Iteration  5
+LR: Training data  75 %
+LR: Error on training data =  1.1173184357541899
+LR: Error on validation data =  3.5714285714285716
+
+LR: Iteration  5
+LR: Training data  100 %
+LR: Error on training data =  1.0467550593161201
+LR: Error on validation data =  3.0219780219780223
+
+LR: Iteration  5
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  0.8238761515280284
+LR: Std deviation of training error =  0.4244673925146561
+LR: Mean of validation error =  5.219780219780221
+LR: Std deviation of validation error =  2.5595197140334323
+
+LR: Iteration  6
+LR: Training data  10 %
+LR: Error on training data =  0.0
+LR: Error on validation data =  10.714285714285715
+
+LR: Iteration  6
+LR: Training data  25 %
+LR: Error on training data =  0.8379888268156424
+LR: Error on validation data =  7.967032967032968
+
+LR: Iteration  6
+LR: Training data  50 %
+LR: Error on training data =  0.8379888268156424
+LR: Error on validation data =  6.043956043956045
+
+LR: Iteration  6
+LR: Training data  75 %
+LR: Error on training data =  0.931098696461825
+LR: Error on validation data =  4.670329670329671
+
+LR: Iteration  6
+LR: Training data  100 %
+LR: Error on training data =  1.1863224005582693
+LR: Error on validation data =  4.670329670329671
+
+LR: Iteration  6
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  0.7586797501302758
+LR: Std deviation of training error =  0.40019529034366935
+LR: Mean of validation error =  6.813186813186813
+LR: Std deviation of validation error =  2.29457285910122
+
+LR: Iteration  7
+LR: Training data  10 %
+LR: Error on training data =  0.6993006993006993
+LR: Error on validation data =  11.263736263736265
+
+LR: Iteration  7
+LR: Training data  25 %
+LR: Error on training data =  1.3966480446927374
+LR: Error on validation data =  7.417582417582418
+
+LR: Iteration  7
+LR: Training data  50 %
+LR: Error on training data =  0.8379888268156424
+LR: Error on validation data =  5.21978021978022
+
+LR: Iteration  7
+LR: Training data  75 %
+LR: Error on training data =  1.1173184357541899
+LR: Error on validation data =  4.670329670329671
+
+LR: Iteration  7
+LR: Training data  100 %
+LR: Error on training data =  1.1863224005582693
+LR: Error on validation data =  3.8461538461538467
+
+LR: Iteration  7
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  1.0475156814243074
+LR: Std deviation of training error =  0.24947477365365697
+LR: Mean of validation error =  6.4835164835164845
+LR: Std deviation of validation error =  2.6669584834091427
+
+LR: Iteration  8
+LR: Training data  10 %
+LR: Error on training data =  2.097902097902098
+LR: Error on validation data =  10.43956043956044
+
+LR: Iteration  8
+LR: Training data  25 %
+LR: Error on training data =  1.3966480446927374
+LR: Error on validation data =  7.417582417582418
+
+LR: Iteration  8
+LR: Training data  50 %
+LR: Error on training data =  1.2569832402234635
+LR: Error on validation data =  4.945054945054945
+
+LR: Iteration  8
+LR: Training data  75 %
+LR: Error on training data =  1.3966480446927374
+LR: Error on validation data =  4.395604395604396
+
+LR: Iteration  8
+LR: Training data  100 %
+LR: Error on training data =  1.3956734124214933
+LR: Error on validation data =  4.395604395604396
+
+LR: Iteration  8
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  1.508770967986506
+LR: Std deviation of training error =  0.2994684307296379
+LR: Mean of validation error =  6.318681318681318
+LR: Std deviation of validation error =  2.344036154692477
+
+LR: Iteration  9
+LR: Training data  10 %
+LR: Error on training data =  0.6993006993006993
+LR: Error on validation data =  6.868131868131869
+
+LR: Iteration  9
+LR: Training data  25 %
+LR: Error on training data =  0.8379888268156424
+LR: Error on validation data =  3.5714285714285716
+
+LR: Iteration  9
+LR: Training data  50 %
+LR: Error on training data =  0.9776536312849161
+LR: Error on validation data =  3.5714285714285716
+
+LR: Iteration  9
+LR: Training data  75 %
+LR: Error on training data =  1.1173184357541899
+LR: Error on validation data =  2.4725274725274726
+
+LR: Iteration  9
+LR: Training data  100 %
+LR: Error on training data =  1.1863224005582693
+LR: Error on validation data =  2.197802197802198
+
+LR: Iteration  9
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+LR: Mean of training error =  0.9637167987427432
+LR: Std deviation of training error =  0.1783616263228187
+LR: Mean of validation error =  3.736263736263736
+LR: Std deviation of validation error =  1.6629391154309403
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  10 %
+LR: Mean of training error =  0.6293706293706294
+LR: Std deviation of training error =  0.6597189602836786
+LR: Mean of validation error =  10.21978021978022
+LR: Std deviation of validation error =  1.7366462229977044
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  25 %
+LR: Mean of training error =  1.005586592178771
+LR: Std deviation of training error =  0.3577164378454105
+LR: Mean of validation error =  6.401098901098902
+LR: Std deviation of validation error =  1.578415650793761
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  50 %
+LR: Mean of training error =  1.047486033519553
+LR: Std deviation of training error =  0.2879263705040266
+LR: Mean of validation error =  4.780219780219779
+LR: Std deviation of validation error =  1.2359584482639554
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  75 %
+LR: Mean of training error =  1.2569832402234635
+LR: Std deviation of training error =  0.19195091366935105
+LR: Mean of validation error =  4.038461538461538
+LR: Std deviation of validation error =  1.1462992332431357
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+LR: Training data  100 %
+LR: Mean of training error =  1.2351709699930216
+LR: Std deviation of training error =  0.09388432691607614
+LR: Mean of validation error =  3.653846153846154
+LR: Std deviation of validation error =  1.0500832337151864
+
+GNB: Iteration  0
+GNB: Training data  10 %
+GNB: Error on training data =  9.09090909090909
+GNB: Error on validation data =  15.65934065934066
+
+GNB: Iteration  0
+GNB: Training data  25 %
+GNB: Error on training data =  8.379888268156424
+GNB: Error on validation data =  12.912087912087912
+
+GNB: Iteration  0
+GNB: Training data  50 %
+GNB: Error on training data =  9.078212290502792
+GNB: Error on validation data =  13.461538461538463
+
+GNB: Iteration  0
+GNB: Training data  75 %
+GNB: Error on training data =  8.938547486033519
+GNB: Error on validation data =  13.186813186813188
+
+GNB: Iteration  0
+GNB: Training data  100 %
+GNB: Error on training data =  9.002093510118632
+GNB: Error on validation data =  11.53846153846154
+
+GNB: Iteration  0
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  8.897930129144092
+GNB: Std deviation of training error =  0.2648054707668847
+GNB: Mean of validation error =  13.351648351648354
+GNB: Std deviation of validation error =  1.3300789491110114
+
+GNB: Iteration  1
+GNB: Training data  10 %
+GNB: Error on training data =  4.895104895104895
+GNB: Error on validation data =  12.08791208791209
+
+GNB: Iteration  1
+GNB: Training data  25 %
+GNB: Error on training data =  7.541899441340782
+GNB: Error on validation data =  12.08791208791209
+
+GNB: Iteration  1
+GNB: Training data  50 %
+GNB: Error on training data =  8.65921787709497
+GNB: Error on validation data =  11.813186813186814
+
+GNB: Iteration  1
+GNB: Training data  75 %
+GNB: Error on training data =  8.752327746741155
+GNB: Error on validation data =  10.43956043956044
+
+GNB: Iteration  1
+GNB: Training data  100 %
+GNB: Error on training data =  8.862526168876483
+GNB: Error on validation data =  10.989010989010989
+
+GNB: Iteration  1
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  7.742215225831657
+GNB: Std deviation of training error =  1.5008318643522545
+GNB: Mean of validation error =  11.483516483516485
+GNB: Std deviation of validation error =  0.6593406593406599
+
+GNB: Iteration  2
+GNB: Training data  10 %
+GNB: Error on training data =  4.195804195804196
+GNB: Error on validation data =  12.637362637362639
+
+GNB: Iteration  2
+GNB: Training data  25 %
+GNB: Error on training data =  7.821229050279329
+GNB: Error on validation data =  11.53846153846154
+
+GNB: Iteration  2
+GNB: Training data  50 %
+GNB: Error on training data =  9.217877094972067
+GNB: Error on validation data =  10.989010989010989
+
+GNB: Iteration  2
+GNB: Training data  75 %
+GNB: Error on training data =  9.31098696461825
+GNB: Error on validation data =  10.164835164835166
+
+GNB: Iteration  2
+GNB: Training data  100 %
+GNB: Error on training data =  9.211444521981857
+GNB: Error on validation data =  10.43956043956044
+
+GNB: Iteration  2
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  7.951468365531139
+GNB: Std deviation of training error =  1.9576310909413102
+GNB: Mean of validation error =  11.153846153846155
+GNB: Std deviation of validation error =  0.8791208791208794
+
+GNB: Iteration  3
+GNB: Training data  10 %
+GNB: Error on training data =  4.195804195804196
+GNB: Error on validation data =  10.714285714285715
+
+GNB: Iteration  3
+GNB: Training data  25 %
+GNB: Error on training data =  7.541899441340782
+GNB: Error on validation data =  8.516483516483516
+
+GNB: Iteration  3
+GNB: Training data  50 %
+GNB: Error on training data =  9.636871508379887
+GNB: Error on validation data =  8.516483516483516
+
+GNB: Iteration  3
+GNB: Training data  75 %
+GNB: Error on training data =  9.217877094972067
+GNB: Error on validation data =  8.516483516483516
+
+GNB: Iteration  3
+GNB: Training data  100 %
+GNB: Error on training data =  10.048848569434753
+GNB: Error on validation data =  9.615384615384617
+
+GNB: Iteration  3
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  8.128260161986336
+GNB: Std deviation of training error =  2.1428887935037286
+GNB: Mean of validation error =  9.175824175824179
+GNB: Std deviation of validation error =  0.8791208791208796
+
+GNB: Iteration  4
+GNB: Training data  10 %
+GNB: Error on training data =  6.9930069930069925
+GNB: Error on validation data =  15.109890109890111
+
+GNB: Iteration  4
+GNB: Training data  25 %
+GNB: Error on training data =  8.100558659217876
+GNB: Error on validation data =  9.340659340659341
+
+GNB: Iteration  4
+GNB: Training data  50 %
+GNB: Error on training data =  8.938547486033519
+GNB: Error on validation data =  10.43956043956044
+
+GNB: Iteration  4
+GNB: Training data  75 %
+GNB: Error on training data =  8.752327746741155
+GNB: Error on validation data =  10.989010989010989
+
+GNB: Iteration  4
+GNB: Training data  100 %
+GNB: Error on training data =  9.211444521981857
+GNB: Error on validation data =  11.53846153846154
+
+GNB: Iteration  4
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  8.39917708139628
+GNB: Std deviation of training error =  0.7927044216367872
+GNB: Mean of validation error =  11.483516483516484
+GNB: Std deviation of validation error =  1.9534493224869431
+
+GNB: Iteration  5
+GNB: Training data  10 %
+GNB: Error on training data =  6.9930069930069925
+GNB: Error on validation data =  17.582417582417584
+
+GNB: Iteration  5
+GNB: Training data  25 %
+GNB: Error on training data =  10.893854748603351
+GNB: Error on validation data =  15.109890109890111
+
+GNB: Iteration  5
+GNB: Training data  50 %
+GNB: Error on training data =  8.938547486033519
+GNB: Error on validation data =  12.912087912087912
+
+GNB: Iteration  5
+GNB: Training data  75 %
+GNB: Error on training data =  10.335195530726256
+GNB: Error on validation data =  12.08791208791209
+
+GNB: Iteration  5
+GNB: Training data  100 %
+GNB: Error on training data =  9.14166085136078
+GNB: Error on validation data =  10.43956043956044
+
+GNB: Iteration  5
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  9.26045312194618
+GNB: Std deviation of training error =  1.347747669916084
+GNB: Mean of validation error =  13.626373626373626
+GNB: Std deviation of validation error =  2.485314918219482
+
+GNB: Iteration  6
+GNB: Training data  10 %
+GNB: Error on training data =  9.09090909090909
+GNB: Error on validation data =  17.30769230769231
+
+GNB: Iteration  6
+GNB: Training data  25 %
+GNB: Error on training data =  11.1731843575419
+GNB: Error on validation data =  11.813186813186814
+
+GNB: Iteration  6
+GNB: Training data  50 %
+GNB: Error on training data =  9.078212290502792
+GNB: Error on validation data =  10.164835164835166
+
+GNB: Iteration  6
+GNB: Training data  75 %
+GNB: Error on training data =  8.938547486033519
+GNB: Error on validation data =  11.53846153846154
+
+GNB: Iteration  6
+GNB: Training data  100 %
+GNB: Error on training data =  9.69993021632938
+GNB: Error on validation data =  11.53846153846154
+
+GNB: Iteration  6
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  9.596156688263337
+GNB: Std deviation of training error =  0.8311169125289846
+GNB: Mean of validation error =  12.472527472527474
+GNB: Std deviation of validation error =  2.485314918219482
+
+GNB: Iteration  7
+GNB: Training data  10 %
+GNB: Error on training data =  6.9930069930069925
+GNB: Error on validation data =  12.08791208791209
+
+GNB: Iteration  7
+GNB: Training data  25 %
+GNB: Error on training data =  9.497206703910614
+GNB: Error on validation data =  9.615384615384617
+
+GNB: Iteration  7
+GNB: Training data  50 %
+GNB: Error on training data =  9.078212290502792
+GNB: Error on validation data =  8.516483516483516
+
+GNB: Iteration  7
+GNB: Training data  75 %
+GNB: Error on training data =  8.752327746741155
+GNB: Error on validation data =  7.142857142857143
+
+GNB: Iteration  7
+GNB: Training data  100 %
+GNB: Error on training data =  9.979064898813677
+GNB: Error on validation data =  7.692307692307693
+
+GNB: Iteration  7
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  8.859963726595046
+GNB: Std deviation of training error =  1.0201187608014861
+GNB: Mean of validation error =  9.010989010989013
+GNB: Std deviation of validation error =  1.7496355305594133
+
+GNB: Iteration  8
+GNB: Training data  10 %
+GNB: Error on training data =  4.895104895104895
+GNB: Error on validation data =  12.362637362637363
+
+GNB: Iteration  8
+GNB: Training data  25 %
+GNB: Error on training data =  8.938547486033519
+GNB: Error on validation data =  9.615384615384617
+
+GNB: Iteration  8
+GNB: Training data  50 %
+GNB: Error on training data =  10.47486033519553
+GNB: Error on validation data =  7.967032967032968
+
+GNB: Iteration  8
+GNB: Training data  75 %
+GNB: Error on training data =  9.683426443202979
+GNB: Error on validation data =  7.692307692307693
+
+GNB: Iteration  8
+GNB: Training data  100 %
+GNB: Error on training data =  10.258199581297976
+GNB: Error on validation data =  8.241758241758243
+
+GNB: Iteration  8
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  8.85002774816698
+GNB: Std deviation of training error =  2.0477711175834963
+GNB: Mean of validation error =  9.175824175824177
+GNB: Std deviation of validation error =  1.7253097217700637
+
+GNB: Iteration  9
+GNB: Training data  10 %
+GNB: Error on training data =  9.09090909090909
+GNB: Error on validation data =  10.714285714285715
+
+GNB: Iteration  9
+GNB: Training data  25 %
+GNB: Error on training data =  7.821229050279329
+GNB: Error on validation data =  9.89010989010989
+
+GNB: Iteration  9
+GNB: Training data  50 %
+GNB: Error on training data =  8.938547486033519
+GNB: Error on validation data =  8.516483516483516
+
+GNB: Iteration  9
+GNB: Training data  75 %
+GNB: Error on training data =  9.776536312849162
+GNB: Error on validation data =  7.142857142857143
+
+GNB: Iteration  9
+GNB: Training data  100 %
+GNB: Error on training data =  9.630146545708305
+GNB: Error on validation data =  7.142857142857143
+
+GNB: Iteration  9
+### ERROR OVER ALL TRAINING DATA PERCENTAGES ###
+GNB: Mean of training error =  9.051473697155881
+GNB: Std deviation of training error =  0.6911421609097644
+GNB: Mean of validation error =  8.681318681318682
+GNB: Std deviation of validation error =  1.4390989949130546
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  10 %
+GNB: Mean of training error =  6.643356643356642
+GNB: Std deviation of training error =  1.9087194495043605
+GNB: Mean of validation error =  13.626373626373626
+GNB: Std deviation of validation error =  2.4455179213481197
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  25 %
+GNB: Mean of training error =  8.77094972067039
+GNB: Std deviation of training error =  1.2751633754763494
+GNB: Mean of validation error =  11.043956043956044
+GNB: Std deviation of validation error =  1.9144232296905879
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  50 %
+GNB: Mean of training error =  9.203910614525139
+GNB: Std deviation of training error =  0.4856239846568074
+GNB: Mean of validation error =  10.32967032967033
+GNB: Std deviation of validation error =  1.860034162616567
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  75 %
+GNB: Mean of training error =  9.24581005586592
+GNB: Std deviation of training error =  0.508366245613359
+GNB: Mean of validation error =  9.89010989010989
+GNB: Std deviation of validation error =  2.044812534717406
+
+### ERROR OVER ALL SPLIT ITERATIONS ###
+GNB: Training data  100 %
+GNB: Mean of training error =  9.504535938590369
+GNB: Std deviation of training error =  0.4595136813162409
+GNB: Mean of validation error =  9.91758241758242
+GNB: Std deviation of validation error =  1.585095795247435
+
+
+Process finished with exit code 0

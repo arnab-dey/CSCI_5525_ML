@@ -1,0 +1,47 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 1.a
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 1.a}
+The expected loss of a function $f(x)$ is in modelling $y$ using loss function $\ell(f(x),y)$ is given by
+\begin{align*}
+	\mathbb{E}_{(x,y)}[\ell(f(x),y)] &= \int_x\int_y \ell(f(x),y)p(x,y)dydx\\
+	&= \int_x \left[\int_y \ell(f(x),y)p(y|x)dy\right]p(x)dx.
+\end{align*}
+When $\ell(f(x),y) = (f(x)-y)^2$, to find the optimal $f(x)$, we take gradient of the expected loss and equate it to $0$. Therefore, denoting the optimal $f(x)$ as $f^*(x)$,
+\begin{align*}
+	&\frac{\partial}{\partial f}\mathbb{E}_{(x,y)}[\ell(f(x),y)] = 0\\
+	\implies & \int_x \frac{\partial}{\partial f}\left[\int_y(f(x)-y)^2p(y|x)dy\right]p(x)dx = 0\\
+	\implies & \int_x\left[(f^*(x)-y)p(y|x)dy\right]p(x)dx = 0\\
+	\implies & \int_x\left[\int_y f^*(x)p(y|x)dy\right]p(x)dx = \int_x\left[\int_y yp(y|x)dy\right]p(x)dx\\
+	\implies & \int_y f^*(x)p(y|x)dy = \int_y y p(y|x)dy\\
+	\implies & f^*(x) = \mathbb{E}[y|x].
+\end{align*}
+%----------------------------------------------------------------------------------------
+%	SOLUTION 1.b
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 1.b}
+We know that,
+\begin{align*}
+	\frac{\partial}{\partial x}|x| = sgn(x), \text{ for } x \neq 0,
+\end{align*}
+where,
+\begin{align*}
+	sgn(x) = \begin{cases}
+		-1 & \text{ if } x <0\\
+		0 & \text{ if } x = 0\\
+		1 & \text{ if } x >0.
+	\end{cases}
+\end{align*}
+Now, the optimal value of $x$ such that $\int sgn(x-y)dy=0$ is the median of $y$ as equal number of positive and negative samples of $y$ gives the minimum value of the integral. Therefore,
+\begin{align*}
+	& \argmin_f \mathbb{E}_{(x,y)}[|f(x)-y|]
+\end{align*}
+can be found from the solution of
+\begin{align*}
+	\int_x\left[\int_y sgn(f(x)-y)p(y|x)dy\right]p(x)dx = 0.
+\end{align*}
+Hence, if the optimal value of $f(x)$ is denoted by $f^*(x)$,
+\begin{align*}
+	f^*(x) = \text{median}(y|x)
+\end{align*}
+

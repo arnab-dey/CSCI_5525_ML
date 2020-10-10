@@ -1,0 +1,126 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 3.i
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 3.i}
+\paragraph{Summary of LDA:}In Fisher's Linear Discriminant Analysis (LDA), the objective is to find the projection matrix $\boldsymbol{W} \in \mathbb{R}^{d \times k}$ such that, the $N$ samples of $d$-dimensional data, $\boldsymbol{X}$, from $K$ different classes, when projected onto $\boldsymbol{W}$ are well separable. Therefore, the projected data for a sample $\boldsymbol{x}$ is,
+\begin{align*}
+	\boldsymbol{z} = \boldsymbol{W}^T\boldsymbol{x},
+\end{align*}
+where $\boldsymbol{x} \in \mathbb{R}^{d} \in \boldsymbol{X}$. We denote the different classes as $C_i, i \in \{1,2,\ldots,K\}$.
+
+The within-class scatter matrix for class $C_i$ is given by,
+\begin{align*}
+	\boldsymbol{S}_i = \sum_{t=1}^{N} r_i^t (\boldsymbol{x}^t-\boldsymbol{m}_i)(\boldsymbol{x}^t-\boldsymbol{m}_i)^T,
+\end{align*}
+where $r_i^t = 1$, if $\boldsymbol{x}^t \in C_i$ and $0$ otherwise and
+\begin{align*}
+	\boldsymbol{m}_i = \frac{\sum_{t=1}^N \boldsymbol{x}^t r_i^t}{\sum_{t=1}^N r_i^t}
+\end{align*}
+is the mean of samples belonging to class $C_i$. The overall within class scatter matrix is,
+\begin{align*}
+	\boldsymbol{S}_W = \sum_{i=1}^K \boldsymbol{S}_i.
+\end{align*}
+Also, the overall mean of all the samples are,
+\begin{align*}
+	\boldsymbol{m} = \frac{1}{K} \sum_{i=1}^K \boldsymbol{m}_i.
+\end{align*}
+The between class scatter matrix is,
+\begin{align*}
+	\boldsymbol{S}_B = \sum_{i=1}^K \left(\sum_{t=1}^N r_i^t\right)(\boldsymbol{m}_i-\boldsymbol{m})(\boldsymbol{m}_i-\boldsymbol{m})^T.
+\end{align*}
+In Fisher's LDA we are interested to find the matrix $\boldsymbol{W}$ which maximizes
+\begin{align*}
+	J(\boldsymbol{W}) = \frac{|\boldsymbol{W}^T\boldsymbol{S}_B \boldsymbol{W}|}{|\boldsymbol{W}^T \boldsymbol{S}_W \boldsymbol{W}|}.
+\end{align*}
+The largest eigen-vectors of $\boldsymbol{S}_W^{-1}\boldsymbol{S}_B$ are the solution. Therefore, to project the data onto $\mathbb{R}$, we need to take the largest eigen-vector of $\boldsymbol{S}_W^{-1}\boldsymbol{S}_B$ as the projection matrix and to project the data onto $\mathbb{R}^2$, we need to take the largest two eigen-vectors of $\boldsymbol{S}_W^{-1}\boldsymbol{S}_B$ as the projection matrix.
+
+Once the projection is done, we need to find a threshold to classify any new data. For Q3.i, I have taken the projected overall mean as the threshold in case the projection is onto $\mathbb{R}$. Therefore, denoting the projection vector as $\boldsymbol{w}_1 \in \mathbb{R}^d$,
+\begin{align*}
+	threshold = \boldsymbol{w}_1^T \boldsymbol{m}.
+\end{align*}
+If the projected value of any new data is larger than the $threshold$, it is classified as belonging to $C_1$, otherwise labeled as $C_2$.
+\paragraph{Result:} The training and test error percentage for $10$-fold cross validation is tabulated in Table~\ref{tbl:3_i_folds}. The mean and standard deviation of the error for both training and test data are shown in Table~\ref{tbl:3_i_mean_std}.
+\begin{table}[ht]
+	\centering
+	\caption{Q3.i: Error table for 10-fold cross validation: Boston50 dataset}
+	\begin{tabular}[t]{ccccccccccc} 
+		\hline
+		  & fold $1$ & fold $2$ & fold $3$ & fold $4$ & fold $5$ & fold $6$ & fold $7$ & fold $8$ & fold $9$ & fold $10$\\ [0.5ex] 
+		\hline
+		Training(\%) & $14.25$ & $13.82$ & $14.25$ & $14.04$ & $14.04$ & $14.25$ & $12.28$ & $13.60$ & $16.01$ & $14.22$\\
+		%\hline
+		Validation(\%) & $12.0$ & $20.0$ & $14.0$ & $14.0$ & $18.0$ & $8.0$ & $34.0$ & $30.0$ & $4.0$ & $23.21$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:3_i_folds}
+\end{table}
+\begin{table}[ht]
+	\centering
+	\caption{Q3.i: Mean and Std of error on Boston50 dataset}
+	\begin{tabular}[t]{ccc} 
+		\hline
+		Dataset & Mean & Standard deviation\\ [0.5ex] 
+		\hline
+		Training(\%) & $14.08$ & $0.86$\\
+		Validation(\%) & $17.72$ & $8.91$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:3_i_mean_std}
+\end{table}
+%----------------------------------------------------------------------------------------
+%	SOLUTION 3.ii
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 3.ii}
+\paragraph{Gaussian Generative Model:} For classification as required in Q3.ii, the first step is to use maximum likelihood estimator (MLE) to estimate the parameters of the gaussian pdf for each class $i.e\ (\mu_k, \Sigma_k)$ for all $k \in \{1,2,\ldots, 10\}$ in case of digits data. Output of the MLE process is the class priors, $\hat{P}(C_i)$, means, $m_i$ and covariance matrices, $S_i$ for all $i \in \{1,2,\ldots,10\}$. The expressions are given below:
+\begin{align}\label{eq:mle}
+\hat{P}(C_i) &= \frac{\sum_{t=1}^N r_i^t}{N} \nonumber\\
+m_i &= \frac{\sum_{t=1}^N r_i^t x^t}{\sum_{t=1}^N r_i^t} \nonumber\\
+S_i &= \frac{\sum_{t=1}^N r_i^t (x^t-m_i)(x^t-m_i)^T}{\sum_{t=1}^N r_i^t},
+\end{align}
+for all $i \in \{1,2,\ldots,10\}$ where $r_i^t = 1$ if $x^t \in C_i$ and $0$ otherwise.
+
+Once the parameters are estimated, we need to find the discriminant function to classify new data. Form Bayes rule,
+\begin{align*}
+\hat{P}(C_i | x) = \frac{\hat{P}(x | C_i)\hat{P}(C_i)}{\sum_{j=1}^{10} \hat{P}(x | C_i)\hat{P}(C_i)}.
+\end{align*}
+Assuming class-conditional densities are Normal and the samples are $d$-dimensional, $i.e$
+\begin{align*}
+\hat{P}(x|C_i) = \frac{1}{(2\pi)^{\frac{d}{2}}|S_i|^{\frac{1}{2}}}\text{exp}\left[-\frac{1}{2}(x-m_i)^TS_i^{-1}(x-m_i)\right],
+\end{align*}
+and as the denominator is common for all $i \in \{1,2,\ldots,10\}$, we can define the discriminant function for class $C_i$ as
+\begin{align*}
+g_i(x) &= \log(\hat{P}(x|C_i)) + \log(\hat{P}(C_i))\\
+&= -\frac{d}{2}\log(2\pi) -\frac{1}{2} \log(|S_i|) -\frac{1}{2}(x-m_i)^TS_i^{-1}(x-m_i) + \log(\hat{P}(C_i)).
+\end{align*}
+Also, we can see that the first term is common to all classes, therefore, we can drop that and use the discriminant function as,
+\begin{align}\label{eq:disc_func}
+g_i(x) = -\frac{1}{2} \log(|S_i|) -\frac{1}{2}(x-m_i)^TS_i^{-1}(x-m_i) + \log(\hat{P}(C_i)).
+\end{align}
+We label $x$ to class $C_i$ if $g_i(x) > g_j(x)$ for all $j \neq i$ where $i,j \in \{1,2,\ldots, 10\}$.
+\paragraph{Result:} The training and test error percentage for $10$-fold cross validation is tabulated in Table~\ref{tbl:3_ii_folds}. The mean and standard deviation of the error for both training and test data are shown in Table~\ref{tbl:3_ii_mean_std}.
+\begin{table}[ht]
+	\centering
+	\caption{Q3.ii: Error table for 10-fold cross validation: Digits dataset}
+	\begin{tabular}{ccccccccccc} 
+		\hline
+		& fold $1$ & fold $2$ & fold $3$ & fold $4$ & fold $5$ & fold $6$ & fold $7$ & fold $8$ & fold $9$ & fold $10$\\ [0.5ex] 
+		\hline
+		Training(\%) & $24.04$ & $29.48$ & $32.76$ & $27.81$ & $27.13$ & $35.91$ & $34.86$ & $28.06$ & $27.87$ & $27.00$\\
+		Validation(\%) & $30.73$ & $26.82$ & $44.69$ & $40.22$ & $34.08$ & $46.93$ & $39.11$ & $41.90$ & $32.96$ & $30.65$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:3_ii_folds}
+\end{table}
+\begin{table}[ht]
+	\centering
+	\caption{Q3.ii: Mean and Std of error on Digits dataset}
+	\begin{tabular}{ccc} 
+		\hline
+		Dataset & Mean & Standard deviation\\ [0.5ex] 
+		\hline
+		Training(\%) & $29.49$ & $3.60$\\
+		Validation(\%) & $36.81$ & $6.36$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:3_ii_mean_std}
+\end{table}

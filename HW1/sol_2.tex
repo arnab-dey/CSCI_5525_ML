@@ -1,0 +1,32 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 2
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 2}
+Let $f \coloneqq \frac{1}{2}\left((A^TA)^{-1}A^T\right)^Tc$. As the columns of $A \in \mathbb{R}^{m\times n}$ are linearly independent, $(A^TA)^{-1}$ exists and therefore the definition of $f$ is valid. Also, let $g \coloneqq d - f^Tf+2b^Tf$, where $g \in \mathbb{R}$. Therefore,
+\begin{align*}
+	\Vert Aw -b +f\Vert_2^2 + g &= (Aw-b+f)^T(Aw-b+f)+g\\
+	&= ((Aw-b)^T+f^T)((Aw-b)+f)+g\\
+	&= (Aw-b)^T(Aw-b)+(Aw-b)^Tf+f^T(Aw-b)+f^Tf+g\\
+	&= \Vert Aw-b \Vert_2^2 + w^TA^Tf-b^Tf+f^TAw-f^Tb+f^Tf+g\\
+	&= \Vert Aw-b \Vert_2^2 + \frac{1}{2}w^TA^T((A^TA)^{-1}A^T)^Tc + c^T((A^TA)^{-1}A^T)Aw -2b^Tf + f^Tf+g\\
+	&= \Vert Aw-b \Vert_2^2 + \frac{1}{2} w^T(A^TA)(A^TA)^{-1}c+\frac{1}{2}c^Tw+d\\
+	&= \Vert Aw-b \Vert_2^2 + \frac{1}{2} w^Tc+\frac{1}{2}c^Tw + d\\
+	&= \Vert Aw-b \Vert_2^2 + c^Tw + d.
+\end{align*}
+The last line follows from the fact that $c^Tw$ is a scalar. $\square$
+
+Therefore,
+\begin{align*}
+	\min_w \Vert Aw-v \Vert_2^2 + c^Tw + d = \min_w \Vert Aw -b + f \Vert_2^2 + g.
+\end{align*}
+To find the optimal value of $w$ which minimizes $\Vert Aw -b + f \Vert_2^2 + g$, we define the cost function,
+\begin{align*}
+	J(w) = (Aw-(b-f))^T(Aw-(b-f)) + g,
+\end{align*}
+and equate $\frac{\partial J(w)}{\partial w}$ to 0. Let the optimal value of $w$ is denoted by $w^*$. Therefore,
+\begin{align*}
+	& \frac{\partial J(w)}{\partial w} = 0\\
+	\implies & A^T(Aw^*-(b-f)) = 0\\
+	\implies & A^TAw^* = A^T(b-f)\\
+	\implies & w^* = (A^TA)^{-1}A^T(b-f).
+\end{align*}
