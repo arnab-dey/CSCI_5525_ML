@@ -7,14 +7,18 @@ import os
 # CLASS DEFINITIONS
 #######################################################################
 class dataloader:
-    def __init__(self, dataset):
+    def __init__(self, dataset, is_mfeat=False):
         ###########################################################################
         # Check if input files are present in the location
         ###########################################################################
         if not os.path.isfile(dataset):
             print("data data file can't be located")
             exit(1)
-        self.data = np.genfromtxt(dataset, delimiter=',')
+        if (False == is_mfeat):
+            self.data = np.genfromtxt(dataset, delimiter=',')
+        else:
+            self.data = np.loadtxt(dataset)
+        self.is_mfeat = is_mfeat
         self.trn_data = None
         self.test_data = None
 
@@ -26,6 +30,14 @@ class dataloader:
             print('invalid data')
             return None
         N = self.data.shape[0]
+        if (True == self.is_mfeat):
+            # Need to append class labels at last
+            samples_per_digit = 200
+            self.data = np.hstack((self.data, np.zeros((N, 1))))
+            for digit in range(10):
+                start = samples_per_digit*digit
+                end = start+samples_per_digit
+                self.data[start:end, -1] = digit
         # Take percentage of data specified in use_percent
         N_used = int(N*use_percent)
         index = np.arange(N)

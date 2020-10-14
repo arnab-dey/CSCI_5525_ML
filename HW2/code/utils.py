@@ -8,7 +8,7 @@ from sklearn.svm import SVC
 #######################################################################
 # Function definitions
 #######################################################################
-def linear_kernel(x,y):
+def linear_kernel(x,y, gamma=None):
     return x @ y.T
 def rbf_kernel(x, y, gamma=2.0):
     N_x = x.shape[0]
@@ -18,13 +18,12 @@ def rbf_kernel(x, y, gamma=2.0):
         K_index = np.exp(-gamma * np.linalg.norm(x - y[index, :], axis=1)**2)
         K.append(K_index)
     K = np.asarray(K)
-    print('done')
     return K.T
 #######################################################################
 # Class definitions
 #######################################################################
 class svm():
-    def __init__(self, kernel='linear', C=0., gamma=5.0):
+    def __init__(self, kernel='linear', C=0., gamma=None):
         if (kernel == 'linear'):
             self.kernel = linear_kernel
         elif (kernel == 'rbf'):
@@ -41,7 +40,7 @@ class svm():
 
     def fit(self, X, y):
         N_trn = X.shape[0]
-        K = self.kernel(X, X)
+        K = self.kernel(X, X, gamma=self.gamma)
         H = np.outer(y, y) * K
         cvxopt_solvers.options['show_progress'] = False
         P = cvxopt_matrix(H)
