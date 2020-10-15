@@ -5,10 +5,7 @@ import numpy as np
 import os
 from dataloader import dataloader
 import utils
-#######################################################################
-# VARIABLE DEFINITIONS
-#######################################################################
-is_fold_verbose_enabled = False
+import config
 #######################################################################
 # FUNCTION DEFINITIONS
 #######################################################################
@@ -17,11 +14,8 @@ def SVM_dual(dataset):
     # Load dataset and get train and test data
     #######################################################################
     C_arr = [1e-4, 1e-3, 1e-2, 0.1, 1, 10, 100, 1000]
-    num_crossval = 10
-    use_percent = 0.1
-    train_split_percent = 0.8
     dl = dataloader(dataset)
-    trn_data, test_data = dl.get_train_test_data(use_percent, train_split_percent)
+    trn_data, test_data = dl.get_train_test_data(config.data_use_percent, config.train_split_percent)
     X_trn = trn_data[:, 0:-1]
     y_trn = trn_data[:, -1]
     y_trn[y_trn == 0] = -1
@@ -35,12 +29,12 @@ def SVM_dual(dataset):
     #######################################################################
     svm_objs = [utils.svm(kernel='linear', C=C_arr[c_idx]) for c_idx in range(len(C_arr))]
     index = np.arange(N)
-    blockSize = int((1 / num_crossval) * N)
-    err_arr_trn = np.zeros((len(C_arr), num_crossval))
-    err_arr_val = np.zeros((len(C_arr), num_crossval))
+    blockSize = int((1 / config.num_crossval) * N)
+    err_arr_trn = np.zeros((len(C_arr), config.num_crossval))
+    err_arr_val = np.zeros((len(C_arr), config.num_crossval))
     for c_idx in range(len(C_arr)):
-        for fold in range(num_crossval):
-            if (fold == num_crossval - 1):
+        for fold in range(config.num_crossval):
+            if (fold == config.num_crossval - 1):
                 v_idx = np.arange(fold * blockSize, N)
             else:
                 v_idx = np.arange(fold * blockSize, (fold + 1) * blockSize)
@@ -58,7 +52,7 @@ def SVM_dual(dataset):
             err_val = (np.sum(prediction_val != val_data_y)) * (100. / N_val)
             err_arr_trn[c_idx, fold] = err_trn
             err_arr_val[c_idx, fold] = err_val
-            if (True == is_fold_verbose_enabled):
+            if (True == config.is_fold_verbose_enabled):
                 print('SVM_dual: C = ', svm_objs[c_idx].C, ' fold = ', fold, ' training error rate = ', err_trn)
                 print('SVM_dual: C = ', svm_objs[c_idx].C, ' fold = ', fold, ' validation error rate = ', err_val)
                 print('')
@@ -76,5 +70,3 @@ def SVM_dual(dataset):
     print('##### SVM_dual: Summary #####')
     print('Optimal C = ', C_optimal)
     print('test error = ', err_test)
-
-

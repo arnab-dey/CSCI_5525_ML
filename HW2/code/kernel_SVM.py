@@ -5,22 +5,18 @@ import numpy as np
 import os
 from dataloader import dataloader
 import utils
-#######################################################################
-# VARIABLE DEFINITIONS
-#######################################################################
-is_fold_verbose_enabled = False
-num_crossval = 10
+import config
 #######################################################################
 # FUNCTION DEFINITIONS
 #######################################################################
 def run_svm(svm_obj, X, y):
     N = X.shape[0]
     index = np.arange(N)
-    blockSize = int((1 / num_crossval) * N)
-    err_arr_trn = np.zeros((num_crossval,))
-    err_arr_val = np.zeros((num_crossval,))
-    for fold in range(num_crossval):
-        if (fold == num_crossval - 1):
+    blockSize = int((1 / config.num_crossval) * N)
+    err_arr_trn = np.zeros((config.num_crossval,))
+    err_arr_val = np.zeros((config.num_crossval,))
+    for fold in range(config.num_crossval):
+        if (fold == config.num_crossval - 1):
             v_idx = np.arange(fold * blockSize, N)
         else:
             v_idx = np.arange(fold * blockSize, (fold + 1) * blockSize)
@@ -38,7 +34,7 @@ def run_svm(svm_obj, X, y):
         err_val = (np.sum(prediction_val != val_data_y)) * (100. / N_val)
         err_arr_trn[fold] = err_trn
         err_arr_val[fold] = err_val
-        if (True == is_fold_verbose_enabled):
+        if (True == config.is_fold_verbose_enabled):
             print('kernel_SVM: C = ', svm_obj.C, ' fold = ', fold, ' training error rate = ', err_trn)
             print('kernel_SVM: C = ', svm_obj.C, ' fold = ', fold, ' validation error rate = ', err_val)
             print('')
@@ -49,10 +45,8 @@ def kernel_SVM(dataset):
     # Load dataset and get train and test data
     #######################################################################
     C_arr = [1e-4, 1e-3, 1e-2, 0.1, 1, 10, 100, 1000]
-    use_percent = 0.1
-    train_split_percent = 0.8
     dl = dataloader(dataset)
-    trn_data, test_data = dl.get_train_test_data(use_percent, train_split_percent)
+    trn_data, test_data = dl.get_train_test_data(config.data_use_percent, config.train_split_percent)
     X_trn = trn_data[:, 0:-1]
     y_trn = trn_data[:, -1]
     y_trn[y_trn == 0] = -1
@@ -73,10 +67,10 @@ def kernel_SVM(dataset):
     #######################################################################
     svm_objs_rbf = [utils.svm(kernel='rbf', C=hyper_params[idx][0], gamma=hyper_params[idx][1]) for idx in range(len(hyper_params))]
     svm_objs_linear = [utils.svm(kernel='linear', C=C_arr[idx]) for idx in range(len(C_arr))]
-    err_arr_trn_rbf = np.zeros((len(hyper_params), num_crossval))
-    err_arr_trn_lin = np.zeros((len(C_arr), num_crossval))
-    err_arr_val_rbf = np.zeros((len(hyper_params), num_crossval))
-    err_arr_val_lin = np.zeros((len(C_arr), num_crossval))
+    err_arr_trn_rbf = np.zeros((len(hyper_params), config.num_crossval))
+    err_arr_trn_lin = np.zeros((len(C_arr), config.num_crossval))
+    err_arr_val_rbf = np.zeros((len(hyper_params), config.num_crossval))
+    err_arr_val_lin = np.zeros((len(C_arr), config.num_crossval))
     #######################################################################
     # Train SVM: RBF
     #######################################################################
