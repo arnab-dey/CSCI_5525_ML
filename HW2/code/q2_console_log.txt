@@ -1,0 +1,52 @@
+SVM_dual: Summary for C =  0.0001
+average training error =  49.77916666666666
+average validation error =  50.7
+standard deviation of training error =  0.7783591577125948
+standard deviation of validation error =  1.6828175777546417
+
+SVM_dual: Summary for C =  0.001
+average training error =  49.355555555555554
+average validation error =  50.0875
+standard deviation of training error =  0.36425977706189866
+standard deviation of validation error =  1.5562876501469773
+
+SVM_dual: Summary for C =  0.01
+average training error =  49.37499999999999
+average validation error =  49.8375
+standard deviation of training error =  0.28293817760365836
+standard deviation of validation error =  1.6240862815749662
+
+SVM_dual: Summary for C =  0.1
+average training error =  49.40277777777778
+average validation error =  49.7375
+standard deviation of training error =  0.28109134757052257
+standard deviation of validation error =  1.5201254060109646
+
+SVM_dual: Summary for C =  1
+average training error =  49.387499999999996
+average validation error =  49.725
+standard deviation of training error =  0.2590529106067466
+standard deviation of validation error =  1.5409007106234978
+
+SVM_dual: Summary for C =  10
+average training error =  49.383333333333326
+average validation error =  49.7125
+standard deviation of training error =  0.26477919988427673
+standard deviation of validation error =  1.5248463037303137
+
+SVM_dual: Summary for C =  100
+average training error =  49.37916666666666
+average validation error =  49.7
+standard deviation of training error =  0.27167248914460335
+standard deviation of validation error =  1.5392774278862145
+
+SVM_dual: Summary for C =  1000
+average training error =  49.37916666666666
+average validation error =  49.7
+standard deviation of training error =  0.27167248914460335
+standard deviation of validation error =  1.5392774278862145
+
+##### SVM_dual: Summary #####
+Optimal C =  100
+test error =  50.800000000000004
+

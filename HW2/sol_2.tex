@@ -1,0 +1,132 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 2
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 2}
+In case of two classes, $C_1$ and $C_2$ with labels $+1/-1$, we are interested to find $w \in \mathbb{R}^{d_1}$ and $b$ such that
+\begin{align*}
+	\begin{cases}
+		w^T \phi(x) + b \geq 1,\ \text{ if } x \in C_1\\
+		w^T \phi(x) + b \leq -1\ \text{ if } x \in C_2,
+	\end{cases}
+\end{align*}
+where $\phi(x) \in \mathbb{R}^{d_1}$ denotes feature space transformation of sample $x \in \mathbb{R}^d$. Note, that in case of linear SVM, $\phi(x) = x$. The training data comprises of $N$ input samples $x_1, x_2, \ldots, x_N$ with corresponding target values $t_1, t_2, \ldots, t_N$ such that $t_1 = 1$ if $x \in C_1$ and $-1$ otherwise. The distance of $x_n$ from the discriminant hyperplane $w^T\phi(x_n)+b$ is given by,
+\begin{align*}
+	\frac{|w^T\phi(x_n)+b|}{\Vert w\Vert},
+\end{align*}
+which can be written as,
+\begin{align*}
+	\frac{t_n(w^T\phi(x_n) + b)}{\Vert w \Vert},
+\end{align*}
+as $t_n = 1$ if $x_n \in C_1$ and $-1$ otherwise. In case of large margin classifier, we would like this be to at least some value $\rho$:
+\begin{align*}
+	\frac{t_n(w^T\phi(x_n) + b)}{\Vert w \Vert} = \rho,
+\end{align*}
+and our objective would be to maximize $\rho$. As we can see that there are infinite number of solutions which can be obtained by scaling $w$ and $b$. Therefore, without loss of generality, for a unique solution, we fix $\rho \Vert w \Vert = 1$. Therefore, the problem can be formulated as,
+\begin{align*}
+	&\min \frac{1}{2} \Vert w \Vert^2,\\
+	&\text{ such that }t_n(w^T\phi(x_n) + b) \geq 1,\  \forall n = 1,2,\ldots,N.
+\end{align*}
+But in case of non-separable classes, the above optimization algorithm will not work. There can be two types of deviation of the samples from the optimal hyperplane: a sample may lie on the wrong side of the hyperplane and thus be miss-classified, or it may be on the right side of the hyper but within the margin, $i.e.$ not sufficiently away from the separating hyperplane. To penalize the hyperplane for these two cases, we introduce slack variable $\xi \geq 0$, which store the deviation from the margin. Therefore, in case of non-separable classes we require,
+\begin{align}\label{eq:non_seep_constraint}
+	t_n(w^T\phi(x_n)+b) \geq 1- \xi_n.
+\end{align}
+If $\xi_n = 0$, then there is no problem with $x_n$. If $0 <\xi_n<1$, $x_n$ is correctly classified but in the margin. If $\xi_n \geq 1$, the sample $x_n$ is misclassified. We deefine soft error as,
+\begin{align*}
+	\sum_{n=1}^N \xi_n,
+\end{align*}
+and add this as a penalty term so that our cost function becomes,
+\begin{align*}
+	L = \frac{1}{2}\Vert w \Vert^2 + C \sum_{n=1}^N \xi_n,
+\end{align*}
+where $C$ is th penalty factor. Adding the constraint~(\ref{eq:non_seep_constraint}) and $\xi_n \geq 0$ $ \forall n=1,2,\ldots,N$, the Lagrangian becomes,
+\begin{align}\label{eq:non_sep_lagran}
+	L(w, b, a) = \frac{1}{2}\Vert w \Vert^2 + C\sum_{n=1}^N \xi_n - \sum_{n=1}^N a_n\{t_n(w^T\phi(x)+b)-1+\xi_n\}-\sum_{n=1}^N \mu_n \xi_n.
+\end{align}
+Taking derivatives with respect to the parameters and setting them to $0$, we get:
+\begin{align}\label{eq:non_sep_pdiff}
+	&\frac{\partial L}{\partial w} = 0 \implies w = \sum_{n=1}^N a_nt_n\phi(x_n), \nonumber\\
+	&\frac{\partial L}{\partial b} = 0 \implies \sum_{n=1}^N a_nt_n = 0,\nonumber\\
+	&\frac{\partial L}{\partial \xi_n} = 0 \implies a_n = C-\mu_n.
+\end{align}
+Using this results to eliminate $w,b$ and $\{\xi_n\}$ from~(\ref{eq:non_sep_lagran}), we get the dual Lagrangian form:
+\begin{align}\label{eq:non_sep_dual}
+	L_d = \sum_{n=1}^N a_n - \frac{1}{2}\sum_{n=1}^N \sum_{m=1}^N a_na_mt_nt_m K(x_n, x_m),
+\end{align}
+where $K(x_n, x_m) = \phi(x_n)^T\phi(x_m)$ is know as Gram matrix or kernel matrix. We have to maximize~(\ref{eq:non_sep_dual}) with respect to the dual variables $\{a_n\}$ subject to
+\begin{align*}
+	&0 \leq a_n \leq C,\\
+	&\sum_{n=1}^N a_nt_n = 0.
+\end{align*}
+This is a quadratic programming which we solve using \textit{cvxopt} python library. We have to vectorize~(\ref{eq:non_sep_dual}) to make it compatible with \textit{cvxopt}. Therefore, if we define a matrix $H$ such that $H(n,m) = t_n t_m K(x_n, x_m)$, we can write the optimization problem~(\ref{eq:non_sep_dual}) as follows:
+\begin{align}
+	&\min_a \frac{1}{2}a^THa-\mathbbm{1}^Ta, \nonumber\\
+	s.t. &-a_n \leq 0, \nonumber\\
+	&a_n \leq C, \nonumber\\
+	& t^Ta = 0,
+\end{align}
+where $a \coloneqq [a_1\ a_2\ \ldots\ a_N]^T$ and $t \coloneqq [t_1\ t_2\ \ldots\ t_N]^T$.
+Once we have the optimization problem in this form, we can use \textit{cvxopt} $qp$ library for quadratic programming. After solving the optimization problem and obtaining optimal values of $a$, we can compute $w$ from~(\ref{eq:non_sep_pdiff}) in case of linar SVM as $\phi(x_n) = x_n,\ \forall n = 1,2,\ldots,N$.
+$b$ can be found from the fact that for any support vector that satisfies $0 < a_n < C$ have $\xi_n = 0$ hence satisfies,
+\begin{align}
+t_n \left(\sum_{m \in \mathcal{S}} a_n t_n K(x_n, x_m) + b\right) = 1,
+\end{align}
+where, $\mathcal{S}$ is the set of the indices of the support vectors. For numerical stability, we take the average over all such vectors $i.e.$
+\begin{align}\label{eq:non_sep_intercept}
+b = \frac{1}{N_m} \sum_{n \in \mathcal{M}} \left(t_n - \sum_{m \in \mathcal{S}}a_mt_mK(x_n, x_m)\right),
+\end{align}
+where $\mathcal{M}$ is the set of indices of datapoints having $0 < a_n < C$.
+
+
+The discriminant function is given by,
+\begin{align}\label{eq:non_sep_disc}
+	g(x) &= w^T\phi(x) + b\nonumber\\
+	&= \sum_{n=1}^N a_n t_n K(x, x_n) + b.
+\end{align}
+We might see that a subset of the data points may have $a_n=0$, in which case they do not contribute to the discriminant function. The remaining data points with $a_n > 0$ are the support vectors. In case of linear SVM, (\ref{eq:non_sep_disc}) can be written as
+\begin{align}\label{eq:non_sep_disc_linear}
+	g(x) &= w^Tx + b\nonumber\\
+	&= \sum_{n=1}^N a_n t_n x^Tx_n + b.
+\end{align}
+In two class classification, we label $x \in C_1$ if $g(x) \geq 0$ and $x \in C_2$ if $g(x) < 0$.
+\paragraph{Results:} The result is summarized in Table~\ref{tbl:q2_mean_diff_c}, \ref{tbl:q2_std_diff_c} and \ref{tbl:q2_test_error}.
+\begin{table}[ht]
+	\centering
+	\caption{Q2: Mean error over 10-fold cross validation: Linear SVM on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C$ & $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ & $1$ & $10$ & $100$ & $1000$\\ [0.5ex] 
+		\hline
+		Training(\%) & $49.78$ & $49.36$ & $49.37$ & $49.40$ & $49.39$ & $49.38$ & $49.37$ & $49.37$\\
+		%\hline
+		Validation(\%) & $50.7$ & $50.09$ & $49.84$ & $49.74$ & $49.73$ & $49.71$ & $49.7$ & $49.7$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q2_mean_diff_c}
+\end{table}
+\begin{table}[ht]
+	\centering
+	\caption{Q2: Std of error over 10-fold cross validation: Linear SVM on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C$ & $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ & $1$ & $10$ & $100$ & $1000$\\ [0.5ex] 
+		\hline
+		Training(\%) & $0.78$ & $0.36$ & $0.28$ & $0.28$ & $0.26$ & $0.26$ & $0.27$ & $0.27$\\
+		%\hline
+		Validation(\%) & $1.68$ & $1.56$ & $1.62$ & $1.52$ & $1.54$ & $1.52$ & $1.54$ & $1.54$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q2_std_diff_c}
+\end{table}
+From Table~\ref{tbl:q2_mean_diff_c} we can infer that the data is not linearly separable and thus error percentage is very high. Also, we can see that as we increase $C$ the validation error rate decreases, which indicates more penalty is added to the optimization problem to penalize the data which are not correctly classified with linear discriminant function. Therefore, a high value of $C$ might be desired for this dataset. I choose $C=100$ as this gives the lowest average validation error and also for the penalty factor reason stated. Table~\ref{tbl:q2_test_error} shows the error rate for $C=100$ on the test data set.
+\begin{table}[ht]
+	\centering
+	\caption{Q2: Test error for optimal $C$: Linear SVM on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{cc} 
+		\hline
+		$C$ & $100$ \\ [0.5ex] 
+		\hline
+		Test(\%) & $50.8$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q2_test_error}
+\end{table}

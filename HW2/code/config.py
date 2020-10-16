@@ -7,7 +7,7 @@
 # e.g. 1. means 100% i.e. entire dataset is used
 # 0.1 means 10% of the dataset (randomly chosen) is used
 # use lower value to accelerate the process
-data_use_percent = 0.1
+data_use_percent = 1.
 
 # This variable configures how much data to be used for training
 # set to 0.8 for 80-20 train-test split

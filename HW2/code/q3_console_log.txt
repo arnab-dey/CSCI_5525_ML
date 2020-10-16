@@ -1,0 +1,295 @@
+RBF kernel_SVM: Summary for C =  0.0001  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.0001  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.0001  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.0001  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.0001  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.001  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  33.62222222222222
+RBF kernel_SVM: average validation error =  36.975
+RBF kernel_SVM: standard deviation of training error =  11.036955319110854
+RBF kernel_SVM: standard deviation of validation error =  9.831677120410331
+
+RBF kernel_SVM: Summary for C =  0.001  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  34.48194444444444
+RBF kernel_SVM: average validation error =  37.5875
+RBF kernel_SVM: standard deviation of training error =  10.490554706025963
+RBF kernel_SVM: standard deviation of validation error =  9.59492867352332
+
+RBF kernel_SVM: Summary for C =  0.001  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  40.82361111111111
+RBF kernel_SVM: average validation error =  42.75
+RBF kernel_SVM: standard deviation of training error =  6.404052205054367
+RBF kernel_SVM: standard deviation of validation error =  6.562440475920524
+
+RBF kernel_SVM: Summary for C =  0.001  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.001  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.01  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  0.19027777777777774
+RBF kernel_SVM: average validation error =  6.825
+RBF kernel_SVM: standard deviation of training error =  0.18901650101068154
+RBF kernel_SVM: standard deviation of validation error =  1.7670597047072292
+
+RBF kernel_SVM: Summary for C =  0.01  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  0.30833333333333324
+RBF kernel_SVM: average validation error =  6.7
+RBF kernel_SVM: standard deviation of training error =  0.4929205605494111
+RBF kernel_SVM: standard deviation of validation error =  2.3198868506890586
+
+RBF kernel_SVM: Summary for C =  0.01  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  15.5
+RBF kernel_SVM: average validation error =  22.65
+RBF kernel_SVM: standard deviation of training error =  2.3943090964582483
+RBF kernel_SVM: standard deviation of validation error =  2.8678171141131017
+
+RBF kernel_SVM: Summary for C =  0.01  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.01  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.1  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  0.7902777777777777
+RBF kernel_SVM: average validation error =  14.4
+RBF kernel_SVM: standard deviation of training error =  0.08772018152576738
+RBF kernel_SVM: standard deviation of validation error =  1.9563997546513852
+
+RBF kernel_SVM: Summary for C =  0.1  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  0.3152777777777777
+RBF kernel_SVM: average validation error =  8.7125
+RBF kernel_SVM: standard deviation of training error =  0.03404902964480907
+RBF kernel_SVM: standard deviation of validation error =  1.2699040318071284
+
+RBF kernel_SVM: Summary for C =  0.1  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  10.02222222222222
+RBF kernel_SVM: average validation error =  17.8375
+RBF kernel_SVM: standard deviation of training error =  0.147012429137769
+RBF kernel_SVM: standard deviation of validation error =  1.1167055341494463
+
+RBF kernel_SVM: Summary for C =  0.1  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  0.1  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  1.0  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  0.9944444444444442
+RBF kernel_SVM: average validation error =  16.775
+RBF kernel_SVM: standard deviation of training error =  0.071145824860365
+RBF kernel_SVM: standard deviation of validation error =  1.2854960132182442
+
+RBF kernel_SVM: Summary for C =  1.0  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  0.4097222222222222
+RBF kernel_SVM: average validation error =  9.9875
+RBF kernel_SVM: standard deviation of training error =  0.04446614053772811
+RBF kernel_SVM: standard deviation of validation error =  1.1003550563340907
+
+RBF kernel_SVM: Summary for C =  1.0  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  9.3875
+RBF kernel_SVM: average validation error =  17.4375
+RBF kernel_SVM: standard deviation of training error =  0.2285091577709419
+RBF kernel_SVM: standard deviation of validation error =  0.9589219207005334
+
+RBF kernel_SVM: Summary for C =  1.0  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  1.0  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  10.0  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  1.0402777777777776
+RBF kernel_SVM: average validation error =  17.1875
+RBF kernel_SVM: standard deviation of training error =  0.07669132051265846
+RBF kernel_SVM: standard deviation of validation error =  1.1966750812146127
+
+RBF kernel_SVM: Summary for C =  10.0  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  0.42499999999999993
+RBF kernel_SVM: average validation error =  10.1
+RBF kernel_SVM: standard deviation of training error =  0.03788383804718293
+RBF kernel_SVM: standard deviation of validation error =  1.0994316713648011
+
+RBF kernel_SVM: Summary for C =  10.0  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  9.334722222222222
+RBF kernel_SVM: average validation error =  17.425
+RBF kernel_SVM: standard deviation of training error =  0.2588294221163551
+RBF kernel_SVM: standard deviation of validation error =  0.9766012492312306
+
+RBF kernel_SVM: Summary for C =  10.0  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  10.0  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  100.0  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  1.0374999999999999
+RBF kernel_SVM: average validation error =  17.2
+RBF kernel_SVM: standard deviation of training error =  0.08099735173235185
+RBF kernel_SVM: standard deviation of validation error =  1.1979148550710939
+
+RBF kernel_SVM: Summary for C =  100.0  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  0.42499999999999993
+RBF kernel_SVM: average validation error =  10.1
+RBF kernel_SVM: standard deviation of training error =  0.03788383804718293
+RBF kernel_SVM: standard deviation of validation error =  1.0994316713648011
+
+RBF kernel_SVM: Summary for C =  100.0  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  9.218055555555555
+RBF kernel_SVM: average validation error =  17.3375
+RBF kernel_SVM: standard deviation of training error =  0.22855980253170796
+RBF kernel_SVM: standard deviation of validation error =  1.0140420356178534
+
+RBF kernel_SVM: Summary for C =  100.0  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  49.6125
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.17307695605148976
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  100.0  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  49.541666666666664
+RBF kernel_SVM: average validation error =  49.6125
+RBF kernel_SVM: standard deviation of training error =  0.1836277097893159
+RBF kernel_SVM: standard deviation of validation error =  1.5576926044634094
+
+RBF kernel_SVM: Summary for C =  1000.0  gamma =  1.2344133531587169e-06
+RBF kernel_SVM: average training error =  1.034722222222222
+RBF kernel_SVM: average validation error =  17.2
+RBF kernel_SVM: standard deviation of training error =  0.08589803386703457
+RBF kernel_SVM: standard deviation of validation error =  1.1979148550710939
+
+RBF kernel_SVM: Summary for C =  1000.0  gamma =  1.2344133531587169e-05
+RBF kernel_SVM: average training error =  0.425
+RBF kernel_SVM: average validation error =  10.0875
+RBF kernel_SVM: standard deviation of training error =  0.04976798018658033
+RBF kernel_SVM: standard deviation of validation error =  1.066609698999592
+
+RBF kernel_SVM: Summary for C =  1000.0  gamma =  0.00012344133531587168
+RBF kernel_SVM: average training error =  1.2625
+RBF kernel_SVM: average validation error =  11.8875
+RBF kernel_SVM: standard deviation of training error =  0.051012132422797105
+RBF kernel_SVM: standard deviation of validation error =  1.253058757600776
+
+RBF kernel_SVM: Summary for C =  1000.0  gamma =  0.0012344133531587169
+RBF kernel_SVM: average training error =  40.39722222222222
+RBF kernel_SVM: average validation error =  49.0625
+RBF kernel_SVM: standard deviation of training error =  0.18903180867609973
+RBF kernel_SVM: standard deviation of validation error =  1.4981759743100942
+
+RBF kernel_SVM: Summary for C =  1000.0  gamma =  0.012344133531587169
+RBF kernel_SVM: average training error =  47.41388888888889
+RBF kernel_SVM: average validation error =  49.4625
+RBF kernel_SVM: standard deviation of training error =  0.17477940240821457
+RBF kernel_SVM: standard deviation of validation error =  1.449191584987989
+
+##### RBF kernel_SVM: Summary #####
+RBF kernel_SVM: Optimal C =  0.01 , optimal gamma =  1.2344133531587169e-05
+RBF kernel_SVM: test error =  4.55
+
+Linear kernel_SVM: Summary for C =  0.0001
+Linear kernel_SVM: average training error =  49.77916666666666
+Linear kernel_SVM: average validation error =  50.7
+Linear kernel_SVM: standard deviation of training error =  0.7783591577125948
+Linear kernel_SVM: standard deviation of validation error =  1.6828175777546417
+
+Linear kernel_SVM: Summary for C =  0.001
+Linear kernel_SVM: average training error =  49.355555555555554
+Linear kernel_SVM: average validation error =  50.0875
+Linear kernel_SVM: standard deviation of training error =  0.36425977706189866
+Linear kernel_SVM: standard deviation of validation error =  1.5562876501469773
+
+Linear kernel_SVM: Summary for C =  0.01
+Linear kernel_SVM: average training error =  49.37499999999999
+Linear kernel_SVM: average validation error =  49.8375
+Linear kernel_SVM: standard deviation of training error =  0.28293817760365836
+Linear kernel_SVM: standard deviation of validation error =  1.6240862815749662
+
+Linear kernel_SVM: Summary for C =  0.1
+Linear kernel_SVM: average training error =  49.40277777777778
+Linear kernel_SVM: average validation error =  49.7375
+Linear kernel_SVM: standard deviation of training error =  0.28109134757052257
+Linear kernel_SVM: standard deviation of validation error =  1.5201254060109646
+
+Linear kernel_SVM: Summary for C =  1
+Linear kernel_SVM: average training error =  49.387499999999996
+Linear kernel_SVM: average validation error =  49.725
+Linear kernel_SVM: standard deviation of training error =  0.2590529106067466
+Linear kernel_SVM: standard deviation of validation error =  1.5409007106234978
+
+Linear kernel_SVM: Summary for C =  10
+Linear kernel_SVM: average training error =  49.383333333333326
+Linear kernel_SVM: average validation error =  49.7125
+Linear kernel_SVM: standard deviation of training error =  0.26477919988427673
+Linear kernel_SVM: standard deviation of validation error =  1.5248463037303137
+
+Linear kernel_SVM: Summary for C =  100
+Linear kernel_SVM: average training error =  49.37916666666666
+Linear kernel_SVM: average validation error =  49.7
+Linear kernel_SVM: standard deviation of training error =  0.27167248914460335
+Linear kernel_SVM: standard deviation of validation error =  1.5392774278862145
+
+Linear kernel_SVM: Summary for C =  1000
+Linear kernel_SVM: average training error =  49.37916666666666
+Linear kernel_SVM: average validation error =  49.7
+Linear kernel_SVM: standard deviation of training error =  0.27167248914460335
+Linear kernel_SVM: standard deviation of validation error =  1.5392774278862145
+
+##### Linear kernel_SVM: Summary #####
+Linear kernel_SVM: Optimal C =  100
+Linear kernel_SVM: test error =  50.800000000000004

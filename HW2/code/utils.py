@@ -4,7 +4,6 @@
 import numpy as np
 from cvxopt import matrix as cvxopt_matrix
 from cvxopt import solvers as cvxopt_solvers
-from sklearn.svm import SVC
 #######################################################################
 # Function definitions
 #######################################################################
@@ -83,8 +82,11 @@ class svm():
                     self.coef.append(((y_k.reshape((y_k.shape[0], 1)) * a).T @ X).T)
                 else:
                     self.coef = None
-                self.intercept.append(np.mean(self.s_vec_y[class_idx][:, 0] - np.sum(
-                    K[sv_idx[:, None], sv_idx] * self.a[class_idx][:, 0] * self.s_vec_y[class_idx][:, 0], axis=1)))
+                m_idx = np.argwhere((a >= eps) & (self.C > a))[:, 0]
+                a_m = a[m_idx].reshape((m_idx.shape[0], 1))
+                y_m = y[m_idx].reshape((a_m.shape[0], 1))
+                self.intercept.append(np.mean(y_m[:, 0] - np.sum(
+                    K[m_idx[:, None], sv_idx] * self.a[class_idx][:, 0] * self.s_vec_y[class_idx][:, 0], axis=1)))
         else:
             H = np.outer(y, y) * K
             cvxopt_solvers.options['show_progress'] = False
@@ -110,7 +112,10 @@ class svm():
                     self.coef = ((y.reshape((y.shape[0], 1)) * a).T @ X).T
             else:
                 self.coef = None
-            self.intercept = np.mean(self.s_vec_y[:, 0] - np.sum(K[sv_idx[:, None], sv_idx] * self.a[:, 0] * self.s_vec_y[:, 0], axis=1))
+            m_idx = np.argwhere((a >= eps) & (self.C > a))[:, 0]
+            a_m = a[m_idx].reshape((m_idx.shape[0], 1))
+            y_m = y[m_idx].reshape((a_m.shape[0], 1))
+            self.intercept = np.mean(y_m[:, 0] - np.sum(K[m_idx[:, None], sv_idx] * self.a[:, 0] * self.s_vec_y[:, 0], axis=1))
 
     def predict(self, X):
         if (self.num_class > 2):

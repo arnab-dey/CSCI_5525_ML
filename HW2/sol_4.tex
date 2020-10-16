@@ -1,0 +1,143 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 4
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 4}
+In one-vs-all multiclass SVM with $K_c$ different classes, we construct $K_c$ separate SVMs, in which the $k^{th}$ model discriminant function $g_k(x)$ is trained using the data from class $C_k$ as positive examples and the data from the remaining $K_c-1$ classes as the negative examples. The implementation for each SVM with linear and rbf kernel are same as explained in `Solution 2' and `Solution 3'. We make prediction for new input $x$ using
+\begin{align*}
+	\argmax_k g_k(x).
+\end{align*}
+i have taken the following $\gamma$ values to play with and tune from cross validation. The interpretation for these range of values comes from the fact that $\gamma$ can be interpreted as $\frac{1}{2\sigma^2}$, where $\sigma^2$ is the variance of the features. I have computed the feature variance and the selected this sweep range to cover a good amount of penalty factors.
+\begin{align*}
+	\gamma = [0.01,\ 0.1,\ 1,\ 10,\ 100]
+\end{align*}
+and as before and to compare the kernel with linear one, I have taken following $C$ values to play with:
+\begin{align*}
+	C = [10^{-4},\ 10^{-3},\ 10^{-2},\ 0.1,\ 1,\ 10,\ 100,\ 1000].
+\end{align*}
+The choice of $C$ comes from the fact that a high value of $C$ means higher penalty for misclassification or for the samples with narrow margins. Therefore, the choice of these $C$ covers a wide range of penalty weights.
+\paragraph{Linear kernel results:}The results of multi-class SVM on \textit{mfeat-fou} with linear kernel are summarized in Table \ref{tbl:q4_linear_mean_diff_c}. \ref{tbl:q4_linear_std_diff_c} and \ref{tbl:q4_linear_test_error}.
+%%%%%%%%%%%%%%%%%%%%%%%%%% TRAIN+VAL LINEAR MEAN ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Mean error over 10-fold cross validation: Linear Kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C$ 			& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		Training(\%) 	& $88.28$ 	& $60.20$ 	& $29.22$ 	& $19.20$ 	& $15.94$ 	& $12.01$ 	& $11.59$ 	& $16.45$\\
+		Validation(\%) 	& $90.12$ 	& $61.18$ 	& $30.75$ 	& $22.12$ 	& $19.25$ 	& $19.00$ 	& $21.06$ 	& $25.56$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_linear_mean_diff_c}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% TRAIN+VAL LINEAR STD ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Std error over 10-fold cross validation: Linear Kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C$ 			& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		Training(\%) 	& $2.96$ 	& $5.49$ 	& $2.68$ 	& $1.16$ 	& $0.47$ 	& $0.38$ 	& $2.50$ 	& $3.48$\\
+		Validation(\%) 	& $2.99$ 	& $5.91$ 	& $4.80$ 	& $3.51$ 	& $2.31$ 	& $2.39$ 	& $3.02$ 	& $3.49$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_linear_std_diff_c}
+\end{table}
+From Table~\ref{tbl:q4_linear_mean_diff_c}, we can see that $C=10$ produces the lowest validation error rate. This also indicates that a high penalty is required for misclassification to have a good performance on `mfeat-fou' data. Table~\ref{tbl:q4_linear_test_error} shows the test error with $C=10$.
+%%%%%%%%%%%%%%%%%%%%%%%%%% OPTIMAL LINEAR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Test error for optimal $C$: Linear kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{cc} 
+		\hline
+		$C$ & $10$ \\ [0.5ex] 
+		\hline
+		Test(\%) & $17.25$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_linear_test_error}
+\end{table}
+\paragraph{RBF kernel results:}The results of multi-class SVM on \textit{mfeat-fou} with rbf kernel are summarized in Table~\ref{tbl:q4_rbf_train_mean}, \ref{tbl:q4_rbf_train_std}, \ref{tbl:q4_rbf_val_mean}, \ref{tbl:q4_rbf_val_std} and \ref{tbl:q4_rbf_test_error}.
+%%%%%%%%%%%%%%%%%%%%%%%%%% TRAIN RBF MEAN ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Train set mean error(\%) over 10-fold cross validation: rbf Kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=0.01$ 				& $89.76$ 	& $87.09$ 	& $64.57$ 	& $29.63$ 	& $17.54$ 	& $17.06$ 	& $19.88$ 	& $63.0$\\
+		$\gamma=0.1$ 				& $89.93$ 	& $67.81$ 	& $35.37$ 	& $20.56$ 	& $15.5$ 	& $13.22$ 	& $38.56$ 	& $53.61$\\
+		$\gamma=1$ 					& $86.85$ 	& $55.91$ 	& $23.45$ 	& $13.76$ 	& $8.59$ 	& $2.58$ 	& $3.31$ 	& $3.51$\\
+		$\gamma=10$ 				& $81.40$ 	& $58.64$ 	& $20.75$ 	& $17.70$ 	& $15.47$ 	& $15.19$ 	& $15.19$ 	& $15.20$\\
+		$\gamma=100$ 				& $74.48$ 	& $32.53$ 	& $19.78$ 	& $19.29$ 	& $19.27$ 	& $19.09$ 	& $19.09$ 	& $19.09$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_rbf_train_mean}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% TRAIN RBF STD ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Train set std error(\%) over 10-fold cross validation: rbf Kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=0.01$ 				& $0.26$ 	& $4.33$ 	& $10.46$ 	& $3.49$ 	& $1.10$ 	& $1.08$ 	& $2.42$ 	& $2.99$\\
+		$\gamma=0.1$ 				& $0.28$ 	& $7.52$ 	& $3.28$ 	& $3.44$ 	& $0.69$ 	& $1.23$ 	& $2.09$ 	& $4.32$\\
+		$\gamma=1$ 					& $4.93$ 	& $4.82$ 	& $3.39$ 	& $0.57$ 	& $0.17$ 	& $0.32$ 	& $0.89$ 	& $0.93$\\
+		$\gamma=10$ 				& $6.18$ 	& $8.57$ 	& $1.04$ 	& $0.33$ 	& $0.46$ 	& $0.49$ 	& $0.50$ 	& $0.49$\\
+		$\gamma=100$ 				& $6.00$ 	& $4.67$ 	& $0.72$ 	& $0.49$ 	& $0.54$ 	& $0.55$ 	& $0.55$ 	& $0.55$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_rbf_train_std}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% VALIDATION RBF MEAN ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Validation set mean error(\%) over 10-fold cross validation: rbf Kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=0.01$ 				& $90.75$ 	& $87.62$ 	& $64.12$ 	& $32.31$ 	& $22.75$ 	& $23.0$ 	& $28.5$ 	& $68.81$\\
+		$\gamma=0.1$ 				& $89.93$ 	& $70.75$ 	& $36.37$ 	& $25.12$ 	& $21.5$ 	& $23.18$ 	& $47.62$ 	& $63.06$\\
+		$\gamma=1$ 					& $86.62$ 	& $56.0$ 	& $26.68$ 	& $19.87$ 	& $16.12$ 	& $16.06$ 	& $19.0$ 	& $19.12$\\
+		$\gamma=10$ 				& $84.87$ 	& $61.12$ 	& $23.56$ 	& $20.93$ 	& $19.87$ 	& $19.25$ 	& $19.25$ 	& $19.25$\\
+		$\gamma=100$ 				& $79.87$ 	& $37.5$ 	& $23.75$ 	& $22.68$ 	& $22.62$ 	& $22.5$ 	& $22.5$ 	& $22.5$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_rbf_val_mean}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% VALIDATION RBF STD ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Validation set std error(\%) over 10-fold cross validation: rbf Kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=0.01$ 				& $2.14$ 	& $3.93$ 	& $10.57$ 	& $4.57$ 	& $3.41$ 	& $2.92$ 	& $4.65$ 	& $5.91$\\
+		$\gamma=0.1$ 				& $2.56$ 	& $7.84$ 	& $3.90$ 	& $5.88$ 	& $3.44$ 	& $3.32$ 	& $4.99$ 	& $7.81$\\
+		$\gamma=1$ 					& $4.63$ 	& $7.09$ 	& $5.22$ 	& $3.37$ 	& $2.14$ 	& $2.46$ 	& $3.30$ 	& $3.07$\\
+		$\gamma=10$ 				& $5.44$ 	& $9.57$ 	& $3.50$ 	& $3.09$ 	& $2.75$ 	& $2.25$ 	& $2.25$ 	& $2.25$\\
+		$\gamma=100$ 				& $7.03$ 	& $5.22$ 	& $3.06$ 	& $2.63$ 	& $2.84$ 	& $2.80$ 	& $2.80$ 	& $2.80$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_rbf_val_std}
+\end{table}
+From Table~\ref{tbl:q4_rbf_val_mean} we can see that the optimal hyperparametere combination is $C=10$ and $\gamma=1$. The test error with these hyperparameters is shown in Table~\ref{tbl:q4_rbf_test_error}.
+%%%%%%%%%%%%%%%%%%%%%%%%%% OPTIMAL RBF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q4: Test error(\%) for optimal $C,\gamma$: rbf kernel on 'mfeat-fou'}
+	\begin{tabular}[t]{cc} 
+		\hline
+		$C=$ & $10.0$ \\ [0.5ex] 
+		\hline
+		$\gamma=1$ & $15.75$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q4_rbf_test_error}
+\end{table}

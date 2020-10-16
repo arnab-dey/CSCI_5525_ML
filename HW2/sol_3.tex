@@ -1,0 +1,150 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 3
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 3}
+SVM procedure with $cvxopt$ for a general kernel function $K(x_n,x_m)$ has been summarized in the theory description of `Solution 2'. Note, that in Q3, we have to test the SVM algorithm with Linear and RBF (Radial basis function) kernels.
+\paragraph{Linear kernel:} For this kernel
+\begin{align*}
+	K(x_n, x_m) = \phi(x_n)^T\phi(x_m) = x_n^Tx_m.
+\end{align*}
+The discriminant function is given in~(\ref{eq:non_sep_disc_linear}. In case of linear kernels, we can compute the weights $w$ explicitly but this is not required if we already have the kernel matrix (also known as Gram matrix) with us as the discriminant function involves kernel. Intercept is computed from~(\ref{eq:non_sep_intercept}).
+\paragraph{Results:}Results with linear kernel is summarized in Table~\ref{tbl:q3_mean_diff_c}, \ref{tbl:q3_std_diff_c} and \ref{tbl:q3_test_error}.
+\begin{table}[ht]
+	\centering
+	\caption{Q3: Mean error over 10-fold cross validation: Linear Kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C$ & $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ & $1$ & $10$ & $100$ & $1000$\\ [0.5ex] 
+		\hline
+		Training(\%) & $49.78$ & $49.36$ & $49.37$ & $49.40$ & $49.39$ & $49.38$ & $49.37$ & $49.37$\\
+		%\hline
+		Validation(\%) & $50.7$ & $50.09$ & $49.84$ & $49.74$ & $49.73$ & $49.71$ & $49.7$ & $49.7$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_mean_diff_c}
+\end{table}
+\begin{table}[ht]
+	\centering
+	\caption{Q3: Std of error over 10-fold cross validation: Linear kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C$ & $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ & $1$ & $10$ & $100$ & $1000$\\ [0.5ex] 
+		\hline
+		Training(\%) & $0.78$ & $0.36$ & $0.28$ & $0.28$ & $0.26$ & $0.26$ & $0.27$ & $0.27$\\
+		%\hline
+		Validation(\%) & $1.68$ & $1.56$ & $1.62$ & $1.52$ & $1.54$ & $1.52$ & $1.54$ & $1.54$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_std_diff_c}
+\end{table}
+From Table~\ref{tbl:q3_mean_diff_c} we can infer that the data is not linearly separable and thus error percentage is very high. Also, we can see that as we increase $C$ the validation error rate decreases, which indicates more penalty is added to the optimization problem to penalize the data which are not correctly classified with linear discriminant function. Therefore, a high value of $C$ might be desired for this dataset. I choose $C=100$ as this gives the lowest average validation error and also for the penalty factor reason stated. Table~\ref{tbl:q3_test_error} shows the error rate for $C=100$ on the test data set.
+\begin{table}[ht]
+	\centering
+	\caption{Q3: Test error for optimal $C$: Linear kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{cc} 
+		\hline
+		$C$ & $100$ \\ [0.5ex] 
+		\hline
+		Test(\%) & $50.8$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_test_error}
+\end{table}
+\paragraph{RBF kernel:} RBF kernel is defined as
+\begin{align}\label{eq:rbf_kernel}
+K(x_n, x_m) = \text{exp}\left[-\gamma \Vert x_n-x_m \Vert^2\right],
+\end{align}
+where $\gamma > 0$ is a hyperparameter tuned via cross-validation. Usually $\gamma$ can be interpreted as $\frac{1}{2\sigma^2}$, where $\sigma$ is the feature variance. Therefore, I have computed variance over all data features and chose the following values of $\gamma$ based on this variance estimate,
+\begin{align*}
+\gamma = [1.23\times 10^{-6},\ 1.23\times 10^{-5},\ 1.23\times 10^{-4},\ 0.00123,\ 0.0123]
+\end{align*}
+and as before and to compare the kernel with linear one, I have taken following $C$ values to play with:
+\begin{align*}
+C = [10^{-4},\ 10^{-3},\ 10^{-2},\ 0.1,\ 1,\ 10,\ 100,\ 1000].
+\end{align*}
+The choice of $C$ comes from the fact that a high value of $C$ means higher penalty for misclassification or for the samples with narrow margins. Therefore, the choice of these $C$ covers a wide range of penalty weights.
+The discriminant function is shown in~(\ref{eq:non_sep_disc}) and the kernel is~(\ref{eq:rbf_kernel}). Intercept is computed from~(\ref{eq:non_sep_intercept}).
+\paragraph{Results:}Results with rbf kernel is summarized in Table~\ref{tbl:q3_rbf_train_mean}, \ref{tbl:q3_rbf_train_std} and \ref{tbl:q3_rbf_test_error}.
+%%%%%%%%%%%%%%%%%%%%%%%%%% TRAIN RBF MEAN ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q3: Train set mean error(\%) over 10-fold cross validation: rbf Kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ & $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ & $1$ & $10$ & $100$ & $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=1.23\times 10^{-6}$ & $49.61$ & $33.62$ & $0.19$ & $0.79$ & $0.99$ & $1.04$ & $1.04$ & $1.03$\\
+		$\gamma=1.23\times 10^{-4}$ & $49.61$ & $34.48$ & $0.31$ & $0.32$ & $0.41$ & $0.42$ & $0.42$ & $0.43$\\
+		$\gamma=1.23\times 10^{-3}$ & $49.61$ & $40.82$ & $15.5$ & $10.02$ & $9.39$ & $9.33$ & $9.22$ & $1.26$\\
+		$\gamma=0.00123$ & $49.61$ & $49.36$ & $49.61$ & $49.61$ & $49.61$ & $49.61$ & $49.61$ & $40.39$\\
+		%\hline
+		$\gamma=0.0123$ & $49.61$ & $50.09$ & $49.61$ & $49.61$ & $49.61$ & $49.61$ & $49.54$ & $47.41$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_rbf_train_mean}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% TRAIN RBF STD ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+	\centering
+	\caption{Q3: Train set std error(\%) over 10-fold cross validation: rbf Kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=1.23\times 10^{-6}$ & $0.17$ 	& $11.03$ 	& $0.18$ 	& $0.08$ 	& $0.07$ 	& $0.07$ 	& $0.08$ 	& $0.08$\\
+		$\gamma=1.23\times 10^{-4}$ & $0.17$ 	& $10.49$ 	& $0.49$ 	& $0.03$ 	& $0.04$ 	& $0.04$ 	& $0.04$ 	& $0.04$\\
+		$\gamma=1.23\times 10^{-3}$ & $0.17$ 	& $6.40$ 	& $2.39$ 	& $0.15$ 	& $0.23$ 	& $0.26$ 	& $0.23$ 	& $0.05$\\
+		$\gamma=0.00123$ 			& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.19$\\
+		$\gamma=0.0123$ 			& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.17$ 	& $0.18$ 	& $0.17$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_rbf_train_std}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% VALIDATION RBF MEAN ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[!ht]
+	\centering
+	\caption{Q3: Validation set mean error(\%) over 10-fold cross validation: rbf Kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=1.23\times 10^{-6}$ & $49.61$ 	& $36.97$ 	& $6.82$ 	& $14.4$ 	& $16.77$ 	& $17.18$ 	& $17.2$ 	& $17.2$\\
+		$\gamma=1.23\times 10^{-4}$ & $49.61$ 	& $37.58$ 	& $6.7$ 	& $8.71$ 	& $9.98$ 	& $10.1$ 	& $10.1$ 	& $10.08$\\
+		$\gamma=1.23\times 10^{-3}$ & $49.61$ 	& $42.75$ 	& $22.65$ 	& $17.83$ 	& $17.43$ 	& $17.42$ 	& $17.33$ 	& $11.88$\\
+		$\gamma=0.00123$ 			& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.06$\\
+		$\gamma=0.0123$ 			& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.61$ 	& $49.46$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_rbf_val_mean}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%% VALIDATION RBF STD ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[!ht]
+	\centering
+	\caption{Q3: Validation set std error(\%) over 10-fold cross validation: rbf Kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{ccccccccc} 
+		\hline
+		$C=$ 						& $10^{-4}$ & $10^{-3}$ & $10^{-2}$ & $0.1$ 	& $1$ 		& $10$ 		& $100$ 	& $1000$\\ [0.5ex] 
+		\hline
+		$\gamma=1.23\times 10^{-6}$ & $1.55$ 	& $9.83$ 	& $1.76$ 	& $1.95$ 	& $1.28$ 	& $1.19$ 	& $1.19$ 	& $1.19$\\
+		$\gamma=1.23\times 10^{-4}$ & $1.55$ 	& $9.59$ 	& $2.31$ 	& $1.26$ 	& $1.10$ 	& $1.09$ 	& $1.09$ 	& $1.06$\\
+		$\gamma=1.23\times 10^{-3}$ & $1.55$ 	& $6.56$ 	& $2.86$ 	& $1.11$ 	& $0.95$ 	& $0.97$ 	& $1.01$ 	& $1.25$\\
+		$\gamma=0.00123$ 			& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.49$\\
+		$\gamma=0.0123$ 			& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.55$ 	& $1.44$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_rbf_val_std}
+\end{table}
+From Table~\ref{tbl:q3_rbf_val_mean} we can see that the optimal hyperparameter combination is $C=0.01$ and $\gamma=1.23\times 10^{-5}$. Test error for these hyperparameters is shown in Table \ref{tbl:q3_rbf_test_error}.
+%%%%%%%%%%%%%%%%%%%%%%%%%% OPTIMAL RBF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[!ht]
+	\centering
+	\caption{Q3: Test error(\%) for optimal $C,\gamma$: rbf kernel on 'hw2\_data\_2020.csv'}
+	\begin{tabular}[t]{cc} 
+		\hline
+		$C=$ & $0.01$ \\ [0.5ex] 
+		\hline
+		$\gamma=1.23\times 10^{-5}$ & $4.55$\\[1ex]
+		\hline
+	\end{tabular}
+	\label{tbl:q3_rbf_test_error}
+\end{table}

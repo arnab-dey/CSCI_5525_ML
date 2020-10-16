@@ -1,0 +1,55 @@
+%----------------------------------------------------------------------------------------
+%	SOLUTION 1.a
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 1.a}
+Kernel function $K_i(x, x^{\prime})$ is defined as
+\begin{align*}
+	K_i(x, x^{\prime}) = \phi_i(x)^T\phi_i(x^{\prime}),
+\end{align*}
+where $x, x \in \mathbb{R}^p$, and  $\phi(x) \in \mathbb{R}^d$ is a feature space transformation. Note, that a valid kernel function is symmetric and positive semidefinite. Let $K_1, K_2, \ldots, K_m$ be a set of valid kernel functions. Therefore, for any $w_j \geq 0, j=1,2,\ldots,m$
+\begin{align*}
+	K(x, x^{\prime}) &= \sum_{j=1}^m w_j K_j(x, x^{\prime})\\
+	&= \sum_{j=1}^m w_j \phi_j(x)^T\phi_j(x^{\prime})\\
+	&= \begin{bmatrix}\sqrt{w_1}\phi_1(x)^T & \sqrt{w_2}\phi_2(x)^T & \cdots & \sqrt{w_m}\phi_m(x)^T\end{bmatrix}\begin{bmatrix}\sqrt{w_1}\phi_1(x^{\prime}) \\ \sqrt{w_2}\phi_2(x^{\prime}) \\ \cdots \\ \sqrt{w_m}\phi_m(x^{\prime})\end{bmatrix}\\
+	&= \phi(x)^T\phi(x^{\prime}),
+\end{align*}
+where, $\phi(x) \coloneqq \begin{bmatrix}\sqrt{w_1}\phi_1(x)^T & \sqrt{w_2}\phi_2(x)^T & \cdots & \sqrt{w_m}\phi_m(x)^T\end{bmatrix}^T$. If $\phi_j(x) \in \mathbb{R}^{d_j}, j=1,2,\ldots,m$ then $\phi(x) \in \mathbb{R}^{(\sum_{j=1}^m d_j)}$. Therefore,
+\begin{align*}
+	K(x^{\prime}, x) = \phi(x^{\prime})^T\phi(x) = \phi(x)^T\phi(x^{\prime}) = K(x, x^{\prime}).
+\end{align*}
+Therefore, $K(x, x^{\prime})$ is symmetric. Also, for any $y \in \mathbb{R}^N$,
+\begin{align*}
+	y^TKy &= \sum_{i=1}^N\sum_{j=1}^N y_iK_{ij}y_j\\
+	&= \sum_{i=1}^N\sum_{j=1}^N y_i\phi(x_i)^T\phi(x_j)y_j\\
+	&= \Vert \sum_{i=1}^N y_i \phi(x_i) \Vert^2 \geq 0,
+\end{align*}
+where $K_{ij} \coloneqq \phi(x_i)^T\phi(x_j) = K(x_i, x_j)$ is the $ij^{th}$ entry of Gram matrix $K$. Therefore, $K$ is positive semidefinite. Thus, $K(x, x^{\prime})$ is a valid kernel.
+%----------------------------------------------------------------------------------------
+%	SOLUTION 1.b
+%----------------------------------------------------------------------------------------
+\subsection*{Solution 1.b}
+Consider,
+\begin{align*}
+	K(x, x^{\prime}) = K_1(x, x^{\prime}) + K_2(x, x^{\prime}),
+\end{align*}
+where $K_1$ and $K_2$ are valid kernel functions. Let,
+\begin{align*}
+	K_1(x, x^{\prime}) = \phi_1(x)^T\phi_1(x^{\prime}),\ K_2(x, x^{\prime}) = \phi_2(x)^T\phi_2(x^{\prime}),
+\end{align*}
+where $\phi_1(x) \in \mathbb{R}^{d_1}$ and $\phi_2(x) \in \mathbb{R}^{d_2}$ are feature transformations. Now,
+\begin{align*}
+	K(x, x^{\prime}) &= \phi_1(x)^T\phi_1(x^{\prime}) + \phi_2(x)^T\phi_2(x^{\prime})\\
+	&= \begin{bmatrix}\phi_1(x)^T & \phi_2(x)^T\end{bmatrix}\begin{bmatrix}\phi_1(x^{\prime})\\\phi_2(x^{\prime})\end{bmatrix}\\
+	&= \phi(x)^T\phi(x^{\prime}),
+\end{align*}
+where $\phi(x) \coloneqq \begin{bmatrix}\phi_1(x)^T & \phi_2(x)^T\end{bmatrix}^T \in \mathbb{R}^{d_1+d_2}$. Now,
+\begin{align*}
+	K(x^{\prime}, x) = \phi(x^{\prime})^T\phi(x) = \phi(x)^T\phi(x^{\prime}) = K(x, x^{\prime}).
+\end{align*}
+Therefore, $K(x, x^{\prime})$ is symmetric. Also,  for any $y \in \mathbb{R}^N$,
+\begin{align*}
+	y^TKy &= \sum_{i=1}^N\sum_{j=1}^N y_iK_{ij}y_j\\
+	&= \sum_{i=1}^N\sum_{j=1}^N y_i\phi(x_i)^T\phi(x_j)y_j\\
+	&= \Vert \sum_{i=1}^N y_i \phi(x_i) \Vert^2 \geq 0,
+\end{align*}
+where $K_{ij} \coloneqq \phi(x_i)^T\phi(x_j) = K(x_i, x_j	)$ is the $ij^{th}$ entry of Gram matrix $K$. Therefore, $K$ is positive semidefinite. Thus, $K(x, x^{\prime})$ is a valid kernel.
