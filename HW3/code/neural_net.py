@@ -12,7 +12,7 @@ from utils import mycallback
 # Variable declaration
 ################################################################################
 isPlotReqd = True
-isPlotPdf = False
+isPlotPdf = True
 num_classes = 10
 batch_size = 32
 max_epochs = 100 # max epoch

@@ -13,16 +13,18 @@ from utils import mycallback
 ################################################################################
 isPlotReqd = True
 isPlotPdf = True
+is_plot_per_run_reqd = False
+num_run = 10
 num_classes = 10
 batch_size = [32, 64, 96, 128]
-max_epochs = 2 # max epoch
-sgd_learning_rate = 0.1
+max_epochs = 100 # max epoch
+sgd_learning_rate = 0.01
 sgd_momentum = 0.0  # not using momentum as asked in hw
-adagrad_learning_rate = 0.01
+adagrad_learning_rate = 0.1
 adagrad_initial_accumulator_value = 0.01
 adam_learning_rate = 0.001
 adam_beta_1 = 0.9
-adam_beta_2 = 0.9
+adam_beta_2 = 0.999
 loss_model = 'categorical_crossentropy'
 accuracy_model = 'accuracy'
 ################################################################################
@@ -114,13 +116,13 @@ def cnn():
     #######################################################################
     # (b) Different optimization model, different batch size
     #######################################################################
-    sgd_train_times = np.zeros((len(batch_size),))
+    sgd_train_times = np.zeros((num_run, len(batch_size)))
     sgd_loss_array = []
     sgd_acc_array = []
-    adagrad_train_times = np.zeros((len(batch_size),))
+    adagrad_train_times = np.zeros((num_run, len(batch_size)))
     adagrad_loss_array = []
     adagrad_acc_array = []
-    adam_train_times = np.zeros((len(batch_size),))
+    adam_train_times = np.zeros((num_run, len(batch_size)))
     adam_loss_array = []
     adam_acc_array = []
     # SGD optimizer
@@ -147,115 +149,120 @@ def cnn():
     cnn_adam.model_compile(opt=opt_adam, loss_model=loss_model, accuracy_model=accuracy_model)
     cb_adam = mycallback(patience=3)
     cnn_adam.cb = cb_adam
-    # Iterate over different batch sizes
-    for batch_idx in range(len(batch_size)):
-        #######################################################################
-        # SGD
-        #######################################################################
-        print('###### Running part 2: SGD with batch size ', batch_size[batch_idx], ' ######')
-        cnn_sgd.model_fit(x_train, y_train, batch_size[batch_idx])
-        time_taken = cb_sgd.time_array[0]
-        sgd_train_times[batch_idx] = time_taken[1]
-        print('SGD: batch size = ', batch_size[batch_idx], ' convergence time = ', time_taken[1])
-        test_loss, test_accuracy = cnn_sgd.model_evaluate(x_test, y_test)
-        print('SGD: batch size = ', batch_size[batch_idx],
-              ', test loss = ', test_loss, ', test accuracy = ', test_accuracy)
-        sgd_loss_array.append(np.asarray(cb_sgd.loss_array))
-        sgd_acc_array.append(np.asarray(cb_sgd.acc_array))
-        epoch_array_sgd = np.linspace(1, np.asarray(cb_sgd.loss_array).shape[0],
-                                      num=np.asarray(cb_sgd.loss_array).shape[0])
-        #######################################################################
-        # ADAGRAD
-        #######################################################################
-        print('###### Running part 2: ADAGRAD with batch size ', batch_size[batch_idx], ' ######')
-        cnn_adagrad.model_fit(x_train, y_train, batch_size[batch_idx])
-        time_taken = cb_adagrad.time_array[0]
-        adagrad_train_times[batch_idx] = time_taken[1]
-        print('ADAGRAD: batch size = ', batch_size[batch_idx], ' convergence time = ', time_taken[1])
-        test_loss, test_accuracy = cnn_adagrad.model_evaluate(x_test, y_test)
-        print('ADAGRAD: batch size = ', batch_size[batch_idx],
-              ', test loss = ', test_loss, ', test accuracy = ', test_accuracy)
-        adagrad_loss_array.append(np.asarray(cb_adagrad.loss_array))
-        adagrad_acc_array.append(np.asarray(cb_adagrad.acc_array))
-        epoch_array_adagrad = np.linspace(1, np.asarray(cb_adagrad.loss_array).shape[0],
-                                          num=np.asarray(cb_adagrad.loss_array).shape[0])
-        #######################################################################
-        # ADAM
-        #######################################################################
-        print('###### Running part 2: ADAM with batch size ', batch_size[batch_idx], ' ######')
-        cnn_adam.model_fit(x_train, y_train, batch_size[batch_idx])
-        time_taken = cb_adam.time_array[0]
-        adam_train_times[batch_idx] = time_taken[1]
-        print('ADAM: batch size = ', batch_size[batch_idx], ' convergence time = ', time_taken[1])
-        test_loss, test_accuracy = cnn_adam.model_evaluate(x_test, y_test)
-        print('ADAM: batch size = ', batch_size[batch_idx],
-              ', test loss = ', test_loss, ', test accuracy = ', test_accuracy)
-        adam_loss_array.append(np.asarray(cb_adam.loss_array))
-        adam_acc_array.append(np.asarray(cb_adam.acc_array))
-        epoch_array_adam = np.linspace(1, np.asarray(cb_adam.loss_array).shape[0],
-                                       num=np.asarray(cb_adam.loss_array).shape[0])
-        #######################################################################
-        # Dataplots
-        #######################################################################
-        #######################################################################
-        # Plot of loss curve
-        #######################################################################
-        if (True == isPlotReqd):
-            ###########################################################################
-            # Configure axis and grid
-            ###########################################################################
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
-            fig.subplots_adjust(left=.15, bottom=.16, right=.99, top=.97)
+    for run_idx in range(num_run):
+        print('###### RUN NUMBER ', run_idx, ' ######')
+        # Iterate over different batch sizes
+        for batch_idx in range(len(batch_size)):
+            #######################################################################
+            # SGD
+            #######################################################################
+            print('###### Running part 2: SGD with batch size ', batch_size[batch_idx], ' ######')
+            cnn_sgd.model_fit(x_train, y_train, batch_size[batch_idx])
+            time_taken = cb_sgd.time_array[0]
+            sgd_train_times[run_idx, batch_idx] = time_taken[1]
+            print('SGD: run no. = ', run_idx, ', batch size = ', batch_size[batch_idx], ' convergence time = ', time_taken[1])
+            test_loss, test_accuracy = cnn_sgd.model_evaluate(x_test, y_test)
+            print('SGD: run no. = ', run_idx, ', batch size = ', batch_size[batch_idx],
+                  ', test loss = ', test_loss, ', test accuracy = ', test_accuracy)
+            sgd_loss_array.append(np.asarray(cb_sgd.loss_array))
+            sgd_acc_array.append(np.asarray(cb_sgd.acc_array))
+            epoch_array_sgd = np.linspace(1, np.asarray(cb_sgd.loss_array).shape[0],
+                                          num=np.asarray(cb_sgd.loss_array).shape[0])
+            #######################################################################
+            # ADAGRAD
+            #######################################################################
+            print('###### Running part 2: ADAGRAD with batch size ', batch_size[batch_idx], ' ######')
+            cnn_adagrad.model_fit(x_train, y_train, batch_size[batch_idx])
+            time_taken = cb_adagrad.time_array[0]
+            adagrad_train_times[run_idx, batch_idx] = time_taken[1]
+            print('ADAGRAD: run no. = ', run_idx, ', batch size = ', batch_size[batch_idx], ' convergence time = ', time_taken[1])
+            test_loss, test_accuracy = cnn_adagrad.model_evaluate(x_test, y_test)
+            print('ADAGRAD: run no. = ', run_idx, ', batch size = ', batch_size[batch_idx],
+                  ', test loss = ', test_loss, ', test accuracy = ', test_accuracy)
+            adagrad_loss_array.append(np.asarray(cb_adagrad.loss_array))
+            adagrad_acc_array.append(np.asarray(cb_adagrad.acc_array))
+            epoch_array_adagrad = np.linspace(1, np.asarray(cb_adagrad.loss_array).shape[0],
+                                              num=np.asarray(cb_adagrad.loss_array).shape[0])
+            #######################################################################
+            # ADAM
+            #######################################################################
+            print('###### Running part 2: ADAM with batch size ', batch_size[batch_idx], ' ######')
+            cnn_adam.model_fit(x_train, y_train, batch_size[batch_idx])
+            time_taken = cb_adam.time_array[0]
+            adam_train_times[run_idx, batch_idx] = time_taken[1]
+            print('ADAM: run no. = ', run_idx, ', batch size = ', batch_size[batch_idx], ' convergence time = ', time_taken[1])
+            test_loss, test_accuracy = cnn_adam.model_evaluate(x_test, y_test)
+            print('ADAM: run no. = ', run_idx, ', batch size = ', batch_size[batch_idx],
+                  ', test loss = ', test_loss, ', test accuracy = ', test_accuracy)
+            adam_loss_array.append(np.asarray(cb_adam.loss_array))
+            adam_acc_array.append(np.asarray(cb_adam.acc_array))
+            epoch_array_adam = np.linspace(1, np.asarray(cb_adam.loss_array).shape[0],
+                                           num=np.asarray(cb_adam.loss_array).shape[0])
+            #######################################################################
+            # Dataplots
+            #######################################################################
+            if (True == is_plot_per_run_reqd):
+                #######################################################################
+                # Plot of loss curve
+                #######################################################################
+                if (True == isPlotReqd):
+                    ###########################################################################
+                    # Configure axis and grid
+                    ###########################################################################
+                    fig = plt.figure()
+                    ax = fig.add_subplot(111)
+                    fig.subplots_adjust(left=.15, bottom=.16, right=.99, top=.97)
 
-            ax.set_axisbelow(True)
-            ax.minorticks_on()
-            ax.grid(which='major', linestyle='-', linewidth='0.5')
-            ax.grid(which='minor', linestyle="-.", linewidth='0.5')
-            ax.plot(epoch_array_sgd, np.asarray(cb_sgd.loss_array), label='SGD loss')
-            ax.plot(epoch_array_adagrad, np.asarray(cb_adagrad.loss_array), label='ADAGRAD loss')
-            ax.plot(epoch_array_adam, np.asarray(cb_adam.loss_array), label='ADAM loss')
-            # ax.plot(epoch_array, np.asarray(cb.acc_array), label='accuracy')
+                    ax.set_axisbelow(True)
+                    ax.minorticks_on()
+                    ax.grid(which='major', linestyle='-', linewidth='0.5')
+                    ax.grid(which='minor', linestyle="-.", linewidth='0.5')
+                    ax.plot(epoch_array_sgd, np.asarray(cb_sgd.loss_array), label='SGD loss')
+                    ax.plot(epoch_array_adagrad, np.asarray(cb_adagrad.loss_array), label='ADAGRAD loss')
+                    ax.plot(epoch_array_adam, np.asarray(cb_adam.loss_array), label='ADAM loss')
+                    # ax.plot(epoch_array, np.asarray(cb.acc_array), label='accuracy')
 
-            ax.set_xlabel(r'number of epochs', fontsize=8)
-            ax.set_ylabel(r'loss', fontsize=8)
+                    ax.set_xlabel(r'number of epochs', fontsize=8)
+                    ax.set_ylabel(r'loss', fontsize=8)
 
-            plt.legend()
-            if (True == isPlotPdf):
-                if not os.path.exists('./generatedPlots'):
-                    os.makedirs('generatedPlots')
-                fig.savefig('./generatedPlots/q3_loss_batch_' + str(batch_size[batch_idx]) + '.pdf')
-            else:
-                plt.show()
-        #######################################################################
-        # Plot of loss curve
-        #######################################################################
-        if (True == isPlotReqd):
-            ###########################################################################
-            # Configure axis and grid
-            ###########################################################################
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
-            fig.subplots_adjust(left=.15, bottom=.16, right=.99, top=.97)
+                    plt.legend()
+                    if (True == isPlotPdf):
+                        if not os.path.exists('./generatedPlots'):
+                            os.makedirs('generatedPlots')
+                        fig.savefig('./generatedPlots/q3_loss_batch_' + str(batch_size[batch_idx])
+                                    + '_run_' + str(run_idx) + '.pdf')
+                    else:
+                        plt.show()
+                #######################################################################
+                # Plot of loss curve
+                #######################################################################
+                if (True == isPlotReqd):
+                    ###########################################################################
+                    # Configure axis and grid
+                    ###########################################################################
+                    fig = plt.figure()
+                    ax = fig.add_subplot(111)
+                    fig.subplots_adjust(left=.15, bottom=.16, right=.99, top=.97)
 
-            ax.set_axisbelow(True)
-            ax.minorticks_on()
-            ax.grid(which='major', linestyle='-', linewidth='0.5')
-            ax.grid(which='minor', linestyle="-.", linewidth='0.5')
-            ax.plot(epoch_array_sgd, np.asarray(cb_sgd.acc_array), label='SGD accuracy')
-            ax.plot(epoch_array_adagrad, np.asarray(cb_adagrad.acc_array), label='ADAGRAD accuracy')
-            ax.plot(epoch_array_adam, np.asarray(cb_adam.acc_array), label='ADAM accuracy')
+                    ax.set_axisbelow(True)
+                    ax.minorticks_on()
+                    ax.grid(which='major', linestyle='-', linewidth='0.5')
+                    ax.grid(which='minor', linestyle="-.", linewidth='0.5')
+                    ax.plot(epoch_array_sgd, np.asarray(cb_sgd.acc_array), label='SGD accuracy')
+                    ax.plot(epoch_array_adagrad, np.asarray(cb_adagrad.acc_array), label='ADAGRAD accuracy')
+                    ax.plot(epoch_array_adam, np.asarray(cb_adam.acc_array), label='ADAM accuracy')
 
-            ax.set_xlabel(r'number of epochs', fontsize=8)
-            ax.set_ylabel(r'accuracy', fontsize=8)
+                    ax.set_xlabel(r'number of epochs', fontsize=8)
+                    ax.set_ylabel(r'accuracy', fontsize=8)
 
-            plt.legend()
-            if (True == isPlotPdf):
-                if not os.path.exists('./generatedPlots'):
-                    os.makedirs('generatedPlots')
-                fig.savefig('./generatedPlots/q3_acc_batch_' + str(batch_size[batch_idx]) + '.pdf')
-            else:
-                plt.show()
+                    plt.legend()
+                    if (True == isPlotPdf):
+                        if not os.path.exists('./generatedPlots'):
+                            os.makedirs('generatedPlots')
+                        fig.savefig('./generatedPlots/q3_acc_batch_' + str(batch_size[batch_idx])
+                                    + '_run_' + str(run_idx) + '.pdf')
+                    else:
+                        plt.show()
 
     #######################################################################
     # Plot of convergence time: SGD
@@ -272,7 +279,7 @@ def cnn():
         ax.minorticks_on()
         ax.grid(which='major', linestyle='-', linewidth='0.5')
         ax.grid(which='minor', linestyle="-.", linewidth='0.5')
-        ax.plot(batch_size, sgd_train_times, label='SGD convergence time')
+        ax.plot(batch_size, np.mean(sgd_train_times, axis=0), label='SGD convergence time')
 
         ax.set_xlabel(r'batch size', fontsize=8)
         ax.set_ylabel(r'convergence time (s)', fontsize=8)
@@ -286,7 +293,7 @@ def cnn():
             plt.show()
 
     #######################################################################
-    # Plot of convergence time: SGD
+    # Plot of convergence time: ADAGRAD
     #######################################################################
     if (True == isPlotReqd):
         ###########################################################################
@@ -300,7 +307,7 @@ def cnn():
         ax.minorticks_on()
         ax.grid(which='major', linestyle='-', linewidth='0.5')
         ax.grid(which='minor', linestyle="-.", linewidth='0.5')
-        ax.plot(batch_size, adagrad_train_times, label='ADAGRAD convergence time')
+        ax.plot(batch_size, np.mean(adagrad_train_times, axis=0), label='ADAGRAD convergence time')
 
         ax.set_xlabel(r'batch size', fontsize=8)
         ax.set_ylabel(r'convergence time (s)', fontsize=8)
@@ -314,7 +321,7 @@ def cnn():
             plt.show()
 
     #######################################################################
-    # Plot of convergence time: SGD
+    # Plot of convergence time: ADAM
     #######################################################################
     if (True == isPlotReqd):
         ###########################################################################
@@ -328,7 +335,7 @@ def cnn():
         ax.minorticks_on()
         ax.grid(which='major', linestyle='-', linewidth='0.5')
         ax.grid(which='minor', linestyle="-.", linewidth='0.5')
-        ax.plot(batch_size, adam_train_times, label='ADAM convergence time')
+        ax.plot(batch_size, np.mean(adam_train_times, axis=0), label='ADAM convergence time')
 
         ax.set_xlabel(r'batch size', fontsize=8)
         ax.set_ylabel(r'convergence time (s)', fontsize=8)
@@ -338,5 +345,35 @@ def cnn():
             if not os.path.exists('./generatedPlots'):
                 os.makedirs('generatedPlots')
             fig.savefig('./generatedPlots/q3_adam_conv_time.pdf')
+        else:
+            plt.show()
+
+    #######################################################################
+    # Plot of convergence time: ALL
+    #######################################################################
+    if (True == isPlotReqd):
+        ###########################################################################
+        # Configure axis and grid
+        ###########################################################################
+        fig = plt.figure()
+        ax = fig.add_subplot(111)
+        fig.subplots_adjust(left=.15, bottom=.16, right=.99, top=.97)
+
+        ax.set_axisbelow(True)
+        ax.minorticks_on()
+        ax.grid(which='major', linestyle='-', linewidth='0.5')
+        ax.grid(which='minor', linestyle="-.", linewidth='0.5')
+        ax.plot(batch_size, np.mean(sgd_train_times, axis=0), label='SGD convergence time')
+        ax.plot(batch_size, np.mean(adagrad_train_times, axis=0), label='ADAGRAD convergence time')
+        ax.plot(batch_size, np.mean(adam_train_times, axis=0), label='ADAM convergence time')
+
+        ax.set_xlabel(r'batch size', fontsize=8)
+        ax.set_ylabel(r'convergence time (s)', fontsize=8)
+
+        plt.legend()
+        if (True == isPlotPdf):
+            if not os.path.exists('./generatedPlots'):
+                os.makedirs('generatedPlots')
+            fig.savefig('./generatedPlots/q3_all_conv_time.pdf')
         else:
             plt.show()
